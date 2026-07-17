@@ -677,11 +677,13 @@ h1 {
 
 @media (max-width: 480px) {
     .header-bar {
-        padding: 10px 15px;
+        padding: 8px 12px;
+        gap: 0;
     }
 
     .brand-title {
-        font-size: 18px;
+        font-size: 16px;
+        word-wrap: break-word;
     }
 
     .brand-title span {
@@ -689,9 +691,18 @@ h1 {
     }
 
     .nav-links {
-        padding: 8px 15px;
-        font-size: 11px;
-        gap: 8px;
+        padding: 8px 12px;
+        font-size: 10px;
+        gap: 6px;
+        justify-content: space-around;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        text-align: center;
     }
 
     .main-container {
