@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Workspace - BIOL1002 Staging</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <div class="main-container">
+        <a href="dashboard.html" class="back-link">← Back to My Dashboard</a>
+        <h1>The Birds and the Bees (BIOL1002)</h1>
+
+        <div class="status-hero status-awaiting-checks">
+            <div class="status-badge-row">
+                <span class="status-dot"></span> Status: Published Awaiting Checks
+            </div>
+            <p class="status-entails">
+                <strong>What this means:</strong> Your staging preview is live. Please run the preview so we can confirm
+                a clean result and move forward.
+            </p>
+        </div>
+        <div class="workspace-status-row" style="margin-bottom:16px;">
+            <span class="audit-pass">Audit: Pass</span>
+            <span class="score-pending" style="margin-left:12px;">Score: Pending</span>
+        </div>
+
+        <div class="workspace-grid">
+
+            <div class="left-column">
+
+                <div class="content-card">
+                    <div class="card-title">1. QuestionMark OnDemand Setup</div>
+                    <div class="card-description">
+                        Open QuestionMark OnDemand to build or update your questions and settings.
+                    </div>
+                    <a href="https://ondemand.questionmark.eu" target="_blank" class="btn btn-teal">Go to OnDemand
+                        Platform</a>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-title">2. Best Practice Assessment Audit</div>
+                    <div class="card-description">
+                        After you build, the system checks your files, settings, and resources.
+                    </div>
+                    <a href="#" class="btn btn-teal" onclick="alert('Opening read-only audit log...');">View Audit
+                        Logs</a>
+                    <div class="passed-indicator">✓ Passed</div>
+                </div>
+
+                <div class="content-card card-active-focus">
+                    <div class="card-title">
+                        3. Execute Required Preview Try-Out
+                        <div class="attention-indicator">⚠️ Next Action</div>
+                    </div>
+                    <div class="card-description">
+                        Run a preview to check layout, formatting, and answer checks.
+                    </div>
+                    <a href="#" class="btn btn-teal" style="box-shadow: 0 2px 4px rgba(0,0,0,0.15);"
+                        onclick="alert('Launching secure testing workspace node...');">Launch Preview Simulation</a>
+                </div>
+
+                <div class="content-card card-disabled">
+                    <div class="card-title">4. Core Performance Validation Run</div>
+                    <div class="card-description">
+                        This step confirms a full run with a clean score before final sign-off.
+                    </div>
+                    <div class="alert-badge">
+                        ℹ️ 100% Test Pass Status: Incomplete / Tryout Attempt Required
+                    </div>
+                    <button class="btn btn-disabled">Trigger Staging Refresh Build</button>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="content-card support-panel">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">⚙️ Assigned Technical Lead
+                    </div>
+                    <div class="support-text">
+                        This exam pipeline is assigned to <strong>Dean Wall</strong>.
+                    </div>
+                    <div class="support-text">
+                        Need help or have a question? Get in touch.
+                    </div>
+                    <a href="mailto:d.wall@soton.ac.uk" class="btn btn-teal" style="display:block; padding: 8px;">Email
+                        Lead Engineer</a>
+                </div>
+
+                <div class="content-card support-panel">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">📄 Shared Workspace
+                        Documentation</div>
+                    <div class="support-text">Open shared guidance, templates, and exam notes.</div>
+                    <a href="https://soton.sharepoint.com" target="_blank" class="btn btn-teal"
+                        style="display:block; padding: 8px;">Open SharePoint Directory</a>
+                </div>
+
+                <div class="content-card support-panel card-disabled">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px; color:#888;">📅 Live Schedule &
+                        Room Booking</div>
+                    <div class="support-text" style="color: #999; font-style: italic; margin-bottom: 0;">
+                        No seating or room data has been allocated. This data panel remains locked until the author
+                        completes all verification runs and final sign-off parameters are satisfied.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+
+</body>
+
+</html>

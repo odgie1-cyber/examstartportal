@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ExamStart Portal - My Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <div class="main-container">
+        <table class="dashboard-table">
+            <thead>
+                <tr>
+                    <th class="col-exam">Exam / Module</th>
+                    <th class="col-status">Current Status</th>
+                    <th class="col-lead">iSolutions Lead</th>
+                    <th class="col-action">Action Step Required</th>
+                    <th class="col-audit">Audit</th>
+                    <th class="col-score">Test Score</th>
+                    <th class="col-share">SharePoint</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL1001</strong><br><span style="color:#666; font-size:12px;">Intro to Biol</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Add/Configure Questions and Rubric</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1001" target="_blank" class="btn-sharepoint">Open
+                            BIOL1001</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1002</strong><br><span style="color:#666; font-size:12px;">The Birds and the
+                            Bees</span>
+                    </td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Tryout Exam and Score 100%</td>
+                    <td><span class="audit-pass">Pass</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1002" target="_blank" class="btn-sharepoint">Open
+                            BIOL1002</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-complete.html';">
+                    <td><strong>BIOL1003</strong><br><span style="color:#666; font-size:12px;">Offspring rearing</span>
+                    </td>
+                    <td><span class="badge badge-scheduled"><span class="status-dot"
+                                style="background-color: #1e7e34;"></span>Scheduled</span></td>
+                    <td>Sarah Reed</td>
+                    <td style="font-style: italic;">Exam Scheduled</td>
+                    <td><span class="audit-pass">Pass</span></td>
+                    <td><span class="score-pass">Pass</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1003" target="_blank" class="btn-sharepoint">Open
+                            BIOL1003</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-failed.html';">
+                    <td><strong>BIOL1002</strong><br><span style="color:#666; font-size:12px;">The Birds and the
+                            Bees</span>
+                    </td>
+                    <td><span class="badge badge-attention"><span class="status-dot"
+                                style="background-color: #d10074;"></span>Published But Needs Attention</span></td>
+                    <td>Dean Wall</td>
+                    <td>Fix Flagged Items</td>
+                    <td><span class="audit-fail">Failed</span></td>
+                    <td><span class="score-fail">Fail</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1002-fix" target="_blank" class="btn-sharepoint">Open
+                            BIOL1002</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,637 @@
+:root {
+    --primary: #005A70;
+    --primary-dark: #004656;
+    --accent: #147794;
+    --bg: #f8fafb;
+    --text: #333333;
+
+    --status-not-started: #64748b;
+    --bg-not-started: #f8fafc;
+
+    --status-awaiting: #d97706;
+    --bg-awaiting: #fef3c7;
+
+    --status-attention: #d10074;
+    --bg-attention: #fff0f7;
+
+    --status-awaiting-checks: #2563eb;
+    --bg-awaiting-checks: #dbeafe;
+
+    --status-passed: #0d9488;
+    --bg-passed: #f0fdfa;
+
+    --status-scheduled: #16a34a;
+    --bg-scheduled: #f0fdf4;
+
+    --muted: #727d84;
+    --border: #c2cbd1;
+}
+
+/* Base layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text)
+}
+
+.header-bar {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.brand-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px
+}
+
+.nav-links {
+    background-color: var(--primary-dark);
+    padding: 10px 30px;
+    font-size: 13px;
+    display: flex;
+    gap: 20px
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px
+}
+
+.back-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 500
+}
+
+.back-link:hover {
+    text-decoration: underline
+}
+
+h1 {
+    font-size: 28px;
+    color: #222;
+    margin: 0 0 20px 0;
+    font-weight: 400
+}
+
+/* Status hero */
+.status-hero-container {
+    border-left: 6px solid var(--status-awaiting);
+    background-color: var(--bg-awaiting);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+}
+
+.status-badge-row {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--status-awaiting);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px
+}
+
+.status-dot {
+    height: 12px;
+    width: 12px;
+    background-color: var(--status-awaiting);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px
+}
+
+.status-entails {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0
+}
+
+/* Grid */
+.workspace-grid {
+    display: flex;
+    gap: 30px
+}
+
+.left-column {
+    flex: 0 0 62%
+}
+
+.right-column {
+    flex: 0 0 35%
+}
+
+.content-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222
+}
+
+.card-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.45;
+    margin-bottom: 15px
+}
+
+.card-active-focus {
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 12px rgba(20, 119, 148, 0.1);
+    background-color: #fffdfa
+}
+
+.attention-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #ffeeba;
+    margin-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    text-align: center
+}
+
+.btn-teal {
+    background-color: var(--accent);
+    color: #fff
+}
+
+.btn-teal:hover {
+    background-color: #10627a
+}
+
+.btn-grey {
+    background-color: var(--muted);
+    color: #fff
+}
+
+.btn-grey:hover {
+    background-color: #5e686e
+}
+
+.btn-disabled {
+    background-color: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+    pointer-events: none;
+    border: 1px solid #cbd5e1
+}
+
+/* Disabled cards */
+.card-disabled {
+    background-color: #f5f7f8;
+    border: 1px dashed #cbd5e1;
+    color: #888
+}
+
+.card-disabled .card-title {
+    color: #888
+}
+
+.card-disabled .card-description {
+    color: #999
+}
+
+/* Alerts and support */
+.alert-badge {
+    border: 2px solid #cbd5e1;
+    background-color: #f8fafc;
+    color: var(--status-not-started);
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center
+}
+
+.support-panel {
+    padding: 15px;
+    background-color: #fcfcfc
+}
+
+.support-text {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 12px
+}
+
+.footer-bar {
+    border-top: 1px solid #dfdfdf;
+    margin-top: 60px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer-bar a {
+    color: var(--primary);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Dashboard table (restored from original inline styles) */
+.dashboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-table th {
+    background-color: #f4f7f9;
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    border-bottom: 2px solid #dfdfdf;
+}
+
+/* Column widths to better match workspace content */
+.dashboard-table th.col-exam {
+    width: 26%;
+}
+
+.dashboard-table th.col-status {
+    width: 20%;
+}
+
+.dashboard-table th.col-lead {
+    width: 12%;
+}
+
+.dashboard-table th.col-action {
+    width: 16%;
+}
+
+.dashboard-table th.col-audit {
+    width: 8%;
+}
+
+.dashboard-table th.col-score {
+    width: 8%;
+}
+
+.dashboard-table th.col-share {
+    width: 10%;
+}
+
+.dashboard-table td {
+    padding: 16px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #dfdfdf;
+    vertical-align: middle;
+}
+
+/* Center the Current Status column (second column) */
+.dashboard-table th.col-status,
+.dashboard-table td:nth-child(2) {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+/* Tighter badge styling inside the status column to keep content on one line */
+.dashboard-table td:nth-child(2) .badge {
+    padding: 4px 8px;
+    font-size: 11px;
+}
+
+.dashboard-table tr:last-child td {
+    border-bottom: none;
+}
+
+.dashboard-table tr.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.dashboard-table tr.clickable-row:hover {
+    background-color: #f4f9fa;
+}
+
+/* Badges and status dots */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-awaiting {
+    background-color: #fef5e7;
+    color: #b05d06;
+    border: 1px solid #fbdba5
+}
+
+.badge-testing {
+    background-color: #eaf7fa;
+    color: #147794;
+    border: 1px solid #b3e0ec
+}
+
+.badge-scheduled {
+    background-color: #eafaf1;
+    color: #1e7e34;
+    border: 1px solid #b7f5d3
+}
+
+.badge-attention {
+    background-color: #fff0f7;
+    color: #d10074;
+    border: 1px solid #f9d5e8
+}
+
+/* Audit badges */
+.audit-pass {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #e6f8ef;
+    color: #0f6b3f;
+    border: 1px solid #bdeccd;
+    text-transform: uppercase
+}
+
+.audit-fail {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #fff0f7;
+    color: #d10074;
+    border: 1px solid #f9d5e8;
+    text-transform: uppercase
+}
+
+.audit-pending {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #fef5e7;
+    color: #b05d06;
+    border: 1px solid #fbdba5;
+    text-transform: uppercase
+}
+
+/* Score badges */
+.score-100 {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #eafaf1;
+    color: #1e7e34;
+    border: 1px solid #b7f5d3
+}
+
+.score-partial {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #fff0f7;
+    color: #d10074;
+    border: 1px solid #f9d5e8
+}
+
+.score-na {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #f1f5f9;
+    color: #6b7280;
+    border: 1px solid #e6e9ee
+}
+
+/* Pass/Fail/Pending score states (text labels) */
+.score-pass {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #eafaf1;
+    color: #1e7e34;
+    border: 1px solid #b7f5d3;
+    text-transform: uppercase;
+}
+
+.score-fail {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #fff0f7;
+    color: #d10074;
+    border: 1px solid #f9d5e8;
+    text-transform: uppercase;
+}
+
+.score-pending {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 16px;
+    background-color: #f1f5f9;
+    color: #6b7280;
+    border: 1px solid #e6e9ee;
+    text-transform: uppercase;
+}
+
+.status-dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px
+}
+
+/* SharePoint button */
+.btn-sharepoint {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid var(--primary-dark)
+}
+
+.btn-sharepoint:hover {
+    background-color: var(--primary-dark)
+}
+
+/* status-hero helper classes (kept) */
+.status-hero {
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+}
+
+.status-hero .status-badge-row {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px
+}
+
+.status-hero .status-dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px
+}
+
+.status-awaiting {
+    border-left: 6px solid var(--status-awaiting);
+    background-color: var(--bg-awaiting)
+}
+
+.status-awaiting .status-badge-row {
+    color: var(--status-awaiting)
+}
+
+.status-awaiting .status-dot {
+    background-color: var(--status-awaiting)
+}
+
+.status-attention {
+    border-left: 6px solid var(--status-attention);
+    background-color: var(--bg-attention)
+}
+
+.status-attention .status-badge-row {
+    color: var(--status-attention)
+}
+
+.status-attention .status-dot {
+    background-color: var(--status-attention)
+}
+
+.status-awaiting-checks {
+    border-left: 6px solid var(--status-awaiting-checks);
+    background-color: var(--bg-awaiting-checks)
+}
+
+.status-awaiting-checks .status-badge-row {
+    color: var(--status-awaiting-checks)
+}
+
+.status-awaiting-checks .status-dot {
+    background-color: var(--status-awaiting-checks)
+}
+
+.status-passed {
+    border-left: 6px solid var(--status-passed);
+    background-color: var(--bg-passed)
+}
+
+.status-passed .status-badge-row {
+    color: var(--status-passed)
+}
+
+.status-passed .status-dot {
+    background-color: var(--status-passed)
+}
+
+.status-scheduled {
+    border-left: 6px solid var(--status-scheduled);
+    background-color: var(--bg-scheduled)
+}
+
+.status-scheduled .status-badge-row {
+    color: var(--status-scheduled)
+}
+
+.status-scheduled .status-dot {
+    background-color: var(--status-scheduled)
+}
