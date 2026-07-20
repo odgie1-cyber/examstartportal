@@ -268,6 +268,101 @@ h1 {
     margin-bottom: 12px
 }
 
+/* Post-exam results guidance */
+.results-guidance {
+    margin-top: 10px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #b7d8cc;
+    border-top: 4px solid var(--status-scheduled);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+}
+
+.results-guidance-header {
+    margin-bottom: 18px
+}
+
+.results-guidance-eyebrow {
+    margin-bottom: 5px;
+    color: var(--status-scheduled);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase
+}
+
+.results-guidance h2 {
+    margin: 0 0 7px;
+    color: #222;
+    font-size: 20px;
+    font-weight: 600
+}
+
+.results-guidance-header p,
+.results-option p,
+.results-alternative {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.results-guidance-header p {
+    margin: 0
+}
+
+.results-guidance-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px
+}
+
+.results-option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #dbe3e8;
+    border-radius: 4px
+}
+
+.results-option-label {
+    margin-bottom: 6px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase
+}
+
+.results-option h3 {
+    margin: 0 0 6px;
+    color: #222;
+    font-size: 16px
+}
+
+.results-option p {
+    flex: 1;
+    margin: 0 0 14px
+}
+
+.results-warning {
+    margin-top: 16px;
+    padding: 12px 14px;
+    color: #6b4f00;
+    background: #fff8df;
+    border: 1px solid #ead38a;
+    border-left: 4px solid #d6a500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.45
+}
+
+.results-alternative {
+    margin: 12px 0 0
+}
+
 .footer-bar {
     border-top: 1px solid #dfdfdf;
     margin-top: 60px;
@@ -815,6 +910,14 @@ h1 {
 
     .card-description {
         font-size: 13px;
+    }
+
+    .results-guidance {
+        padding: 18px
+    }
+
+    .results-guidance-options {
+        grid-template-columns: 1fr
     }
 
     .workspace-status-row {
