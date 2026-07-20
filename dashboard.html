@@ -12,23 +12,65 @@
 
     <div id="site-header"></div>
 
-    <div class="main-container">
-        <div class="dashboard-actions">
-            <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
-                class="btn btn-teal">Open QuestionMark OnDemand</a>
-            <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
-                rel="noopener noreferrer" class="btn btn-elearn">View OnDemand Guidance</a>
-        </div>
+    <div class="main-container dashboard-container">
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Exam tools and results guidance">
+                <section class="dashboard-menu-card" aria-labelledby="dashboard-tools-title">
+                    <div class="dashboard-menu-eyebrow">Useful links</div>
+                    <h2 id="dashboard-tools-title">Exam tools</h2>
+                    <div class="dashboard-actions">
+                        <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-teal">Open QuestionMark OnDemand</a>
+                        <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-elearn">View OnDemand Guidance</a>
+                    </div>
+                </section>
 
-        <table class="dashboard-table">
+                <section class="results-guidance dashboard-results-guidance"
+                    aria-labelledby="dashboard-results-guidance-title">
+                    <div class="results-guidance-header">
+                        <div class="results-guidance-eyebrow">After the exam</div>
+                        <h2 id="dashboard-results-guidance-title">Check and export student results</h2>
+                        <p>These links open guidance for the appropriate OnDemand results tool in a new tab.</p>
+                    </div>
+
+                    <div class="results-guidance-options">
+                        <div class="results-option">
+                            <div class="results-option-label">Individual student</div>
+                            <h3>Check a student&rsquo;s score</h3>
+                            <p>Read how to view one student&rsquo;s results report.</p>
+                            <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#see-a-results-report-for-an-individual"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Checker
+                                Guidance</a>
+                        </div>
+
+                        <div class="results-option">
+                            <div class="results-option-label">All students</div>
+                            <h3>Download all scores</h3>
+                            <p>Read how to export a detailed results spreadsheet.</p>
+                            <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#exporting-a-detailed-spreadsheet-of-your-exam-results"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Exporter
+                                Guidance</a>
+                        </div>
+                    </div>
+
+                    <div class="results-warning" role="note">
+                        <strong>Important:</strong> Do not use the Results Exporter until the day after your exam.
+                    </div>
+                    <p class="results-alternative">Alternatively, request your results from iSolutions.</p>
+                </section>
+            </aside>
+
+            <main class="dashboard-content">
+                <table class="dashboard-table">
             <thead>
                 <tr>
                     <th class="col-exam">Exam / Module</th>
                     <th class="col-status">Current Status</th>
                     <th class="col-lead">iSolutions Lead</th>
                     <th class="col-action">Action Step Required</th>
-                    <th class="col-audit">Audit</th>
-                    <th class="col-score">Test Score</th>
+                    <th class="col-audit">Quality Checks</th>
+                    <th class="col-score">Tryout</th>
                     <th class="col-share">SharePoint</th>
                 </tr>
             </thead>
@@ -41,7 +83,8 @@
                     <td>Add/Configure Questions and Rubric</td>
                     <td><span class="audit-pending">Pending</span></td>
                     <td><span class="score-pending">Pending</span></td>
-                    <td><a href="https://soton.sharepoint.com/biol1001" target="_blank" class="btn-sharepoint">Open
+                    <td><a href="https://soton.sharepoint.com/biol1001" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open
                             BIOL1001</a></td>
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
@@ -54,7 +97,8 @@
                     <td>Tryout Exam and Score 100%</td>
                     <td><span class="audit-pass">Pass</span></td>
                     <td><span class="score-pending">Pending</span></td>
-                    <td><a href="https://soton.sharepoint.com/biol1002" target="_blank" class="btn-sharepoint">Open
+                    <td><a href="https://soton.sharepoint.com/biol1002" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open
                             BIOL1002</a></td>
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-tryout-failed.html';">
@@ -65,8 +109,9 @@
                     <td>Dean Wall</td>
                     <td>Try Out Exam Again or Ask for Results</td>
                     <td><span class="audit-pass">Pass</span></td>
-                    <td><span class="score-fail">Fail</span></td>
-                    <td><a href="https://soton.sharepoint.com/biol1004" target="_blank" class="btn-sharepoint">Open
+                    <td><span class="score-fail">Attempted &ndash; No 100% Yet</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1004" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open
                             BIOL1004</a></td>
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-complete.html';">
@@ -78,7 +123,8 @@
                     <td style="font-style: italic;">Exam Scheduled</td>
                     <td><span class="audit-pass">Pass</span></td>
                     <td><span class="score-pass">Pass</span></td>
-                    <td><a href="https://soton.sharepoint.com/biol1003" target="_blank" class="btn-sharepoint">Open
+                    <td><a href="https://soton.sharepoint.com/biol1003" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open
                             BIOL1003</a></td>
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-failed.html';">
@@ -91,45 +137,14 @@
                     <td>Speak to iSolutions About Audit Findings</td>
                     <td><span class="audit-fail">Failed</span></td>
                     <td><span class="score-pending">Pending</span></td>
-                    <td><a href="https://soton.sharepoint.com/biol1002-fix" target="_blank" class="btn-sharepoint">Open
+                    <td><a href="https://soton.sharepoint.com/biol1002-fix" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open
                             BIOL1002</a></td>
                 </tr>
             </tbody>
-        </table>
-
-        <section class="results-guidance dashboard-results-guidance" aria-labelledby="dashboard-results-guidance-title">
-            <div class="results-guidance-header">
-                <div class="results-guidance-eyebrow">After the exam</div>
-                <h2 id="dashboard-results-guidance-title">Check and export student results</h2>
-                <p>Once the scheduled exam has taken place, use the links below to open guidance for the appropriate
-                    OnDemand results tool in a new tab.</p>
-            </div>
-
-            <div class="results-guidance-options">
-                <div class="results-option">
-                    <div class="results-option-label">Individual student</div>
-                    <h3>Check a student&rsquo;s score</h3>
-                    <p>Read how to view the results report for one student in OnDemand.</p>
-                    <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#see-a-results-report-for-an-individual"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Results Checker
-                        Guidance</a>
-                </div>
-
-                <div class="results-option">
-                    <div class="results-option-label">All students</div>
-                    <h3>Download all scores</h3>
-                    <p>Read how to export a detailed spreadsheet containing the exam results.</p>
-                    <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#exporting-a-detailed-spreadsheet-of-your-exam-results"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Results Exporter
-                        Guidance</a>
-                </div>
-            </div>
-
-            <div class="results-warning" role="note">
-                <strong>Important:</strong> Do not use the Results Exporter until the day after your exam.
-            </div>
-            <p class="results-alternative">Alternatively, request your results from iSolutions.</p>
-        </section>
+                </table>
+            </main>
+        </div>
     </div>
 
     <div id="site-footer"></div>
