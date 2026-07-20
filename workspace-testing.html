@@ -21,8 +21,10 @@
                 <span class="status-dot"></span> Status: Published Awaiting Checks
             </div>
             <p class="status-entails">
-                <strong>What this means:</strong> Your staging preview is live. Please run the preview so we can confirm
-                a clean result and move forward.
+                <strong>What this means:</strong> We have published your exam, and you will find a button below that
+                allows you to attempt it. You should be able to score 100% on this version. If you do not, please let
+                us know, and we can produce a breakdown report showing where things went wrong. Print versions of the
+                exam are also available via the SharePoint button below.
             </p>
         </div>
         <div class="workspace-status-row" style="margin-bottom:16px;">
@@ -35,68 +37,66 @@
             <div class="left-column">
 
                 <div class="content-card">
-                    <div class="card-title">1. QuestionMark OnDemand Setup</div>
+                    <div class="card-title">1. Create Exam in OnDemand</div>
                     <div class="card-description">
-                        Open QuestionMark OnDemand to build or update your questions and settings.
+                        Open OnDemand using the link below and add your questions and rubric to the relevant folders.
                     </div>
-                    <a href="https://ondemand.questionmark.eu" target="_blank" class="btn btn-teal">Go to OnDemand
-                        Platform</a>
+                    <div class="card-actions">
+                        <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-teal">Log in to OnDemand</a>
+                        <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-elearn">View OnDemand Guidance</a>
+                    </div>
                 </div>
 
                 <div class="content-card">
-                    <div class="card-title">2. Best Practice Assessment Audit</div>
+                    <div class="card-title">2. Best Practice Quality Checks</div>
                     <div class="card-description">
-                        After you build, the system checks your files, settings, and resources.
+                        We check your exam against known best practices, and the results are shown here. We will contact
+                        you if we notice anything that needs your attention or if we make any changes.
                     </div>
-                    <a href="#" class="btn btn-teal" onclick="alert('Opening read-only audit log...');">View Audit
-                        Logs</a>
+                    <a href="#" class="btn btn-teal" onclick="alert('Opening read-only audit log...');">Results of
+                        Quality Checks</a>
                     <div class="passed-indicator">✓ Passed</div>
                 </div>
 
                 <div class="content-card card-active-focus">
                     <div class="card-title">
-                        3. Execute Required Preview Try-Out
+                        3. Try Out Your Exam and View Results
                         <div class="attention-indicator">⚠️ Next Action</div>
                     </div>
                     <div class="card-description">
-                        Run a preview to check layout, formatting, and answer checks.
+                        Use this button to try out your exam. You should be able to score 100% on this version. If you do
+                        not, please let us know, and we can produce a breakdown report showing where things went wrong.
                     </div>
                     <a href="#" class="btn btn-teal" style="box-shadow: 0 2px 4px rgba(0,0,0,0.15);"
-                        onclick="alert('Launching secure testing workspace node...');">Launch Preview Simulation</a>
-                </div>
-
-                <div class="content-card card-disabled">
-                    <div class="card-title">4. Core Performance Validation Run</div>
-                    <div class="card-description">
-                        This step confirms a full run with a clean score before final sign-off.
-                    </div>
-                    <div class="alert-badge">
-                        ℹ️ 100% Test Pass Status: Incomplete / Tryout Attempt Required
-                    </div>
-                    <button class="btn btn-disabled">Trigger Staging Refresh Build</button>
+                        onclick="alert('Launching secure testing workspace node...');">Try Out Exam</a>
+                    <div class="alert-badge tryout-result tryout-result-pending">Pending: No one has attempted a tryout
+                        yet.</div>
                 </div>
             </div>
 
             <div class="right-column">
                 <div class="content-card support-panel">
-                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">⚙️ Assigned Technical Lead
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">⚙️ iSolutions Member
                     </div>
                     <div class="support-text">
-                        This exam pipeline is assigned to <strong>Dean Wall</strong>.
+                        This exam is being configured by <strong>Dean Wall</strong>.
                     </div>
                     <div class="support-text">
                         Need help or have a question? Get in touch.
                     </div>
                     <a href="mailto:d.wall@soton.ac.uk" class="btn btn-teal" style="display:block; padding: 8px;">Email
-                        Lead Engineer</a>
+                        iSolutions Member</a>
                 </div>
 
                 <div class="content-card support-panel">
-                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">📄 Shared Workspace
-                        Documentation</div>
-                    <div class="support-text">Open shared guidance, templates, and exam notes.</div>
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">📄 Print Out Version of the Exam
+                    </div>
+                    <div class="support-text">A full MS Word version with answers and a printable PDF version for a
+                        paper-and-pen sitting can be found here.</div>
                     <a href="https://soton.sharepoint.com" target="_blank" class="btn btn-teal"
-                        style="display:block; padding: 8px;">Open SharePoint Directory</a>
+                        style="display:block; padding: 8px;">Go to SharePoint Folder</a>
                 </div>
 
                 <div class="content-card support-panel card-disabled">

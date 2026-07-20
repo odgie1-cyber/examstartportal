@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Workspace - BIOL1001 Awaiting Author</title>
+    <title>Exam Workspace - BIOL1004 Tryout Not Yet Passed</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,62 +14,72 @@
 
     <div class="main-container">
         <a href="dashboard.html" class="back-link">← Back to My Dashboard</a>
-        <h1>Intro to Biol (BIOL1001)</h1>
+        <h1>Marine Ecosystems (BIOL1004)</h1>
 
-        <div class="status-hero status-awaiting">
+        <div class="status-hero status-awaiting-checks">
             <div class="status-badge-row">
-                <span class="status-dot"></span> Status: Awaiting Author
+                <span class="status-dot"></span> Status: Published Awaiting Checks
             </div>
             <p class="status-entails">
-                <strong>What this means:</strong> We are waiting for you to tell us that your questions and rubric
-                are ready to be published for initial testing. Get in touch when you are ready, or if you need a
-                hand with anything.
+                <strong>What this means:</strong> We have published your exam, and you will find a button below that
+                allows you to attempt it. You should be able to score 100% on this version. If you do not, please let
+                us know, and we can produce a breakdown report showing where things went wrong. Print versions of the
+                exam are also available via the SharePoint button below.
             </p>
         </div>
         <div class="workspace-status-row" style="margin-bottom:16px;">
-            <span class="audit-pending">Audit: Pending</span>
-            <span class="score-pending" style="margin-left:12px;">Score: Pending</span>
+            <span class="audit-pass">Audit: Pass</span>
+            <span class="score-fail" style="margin-left:12px;">Score: Fail</span>
         </div>
 
         <div class="workspace-grid">
 
             <div class="left-column">
 
-                <div class="content-card card-active-focus">
-                    <div class="card-title">
-                        1. Create Exam in OnDemand
-                        <div class="attention-indicator">⚠️ Next Action</div>
-                    </div>
+                <div class="content-card">
+                    <div class="card-title">1. Create Exam in OnDemand</div>
                     <div class="card-description">
                         Open OnDemand using the link below and add your questions and rubric to the relevant folders.
                     </div>
                     <div class="card-actions">
                         <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-teal" style="box-shadow: 0 2px 4px rgba(0,0,0,0.15);">Log in to
-                            OnDemand</a>
+                            class="btn btn-teal">Log in to OnDemand</a>
                         <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
                             rel="noopener noreferrer" class="btn btn-elearn">View OnDemand Guidance</a>
                     </div>
                 </div>
 
-                <div class="content-card card-disabled">
+                <div class="content-card">
                     <div class="card-title">2. Best Practice Quality Checks</div>
                     <div class="card-description">
                         We check your exam against known best practices, and the results are shown here. We will contact
                         you if we notice anything that needs your attention or if we make any changes.
                     </div>
-                    <button class="btn btn-disabled">Results of Quality Checks</button>
+                    <a href="#" class="btn btn-teal" onclick="alert('Opening read-only audit log...');">Results of
+                        Quality Checks</a>
+                    <div class="passed-indicator">✓ Passed</div>
                 </div>
 
-                <div class="content-card card-disabled">
-                    <div class="card-title">3. Try Out Your Exam and View Results</div>
+                <div class="content-card card-active-focus">
+                    <div class="card-title">
+                        3. Try Out Your Exam and View Results
+                        <div class="attention-indicator">⚠️ Action Needed</div>
+                    </div>
                     <div class="card-description">
                         Use this button to try out your exam. You should be able to score 100% on this version. If you do
                         not, please let us know, and we can produce a breakdown report showing where things went wrong.
                     </div>
-                    <button class="btn btn-disabled">Try Out Exam</button>
-                    <div class="alert-badge tryout-result tryout-result-pending">Pending: No one has attempted a tryout
-                        yet.</div>
+                    <div class="alert-badge tryout-result tryout-result-fail">
+                        <strong>Tryout not yet passed:</strong>
+                        <span class="tryout-result-message">One or more attempts have been made, but no one has scored
+                            100% yet.<br>You can try again or ask us for the results.</span>
+                    </div>
+                    <div class="card-actions tryout-recovery-actions">
+                        <a href="#" class="btn btn-teal"
+                            onclick="alert('Launching secure testing workspace node...');">Try Out Exam Again</a>
+                        <a href="mailto:d.wall@soton.ac.uk?subject=BIOL1004%20tryout%20results"
+                            class="btn btn-attention">Ask for Tryout Results</a>
+                    </div>
                 </div>
             </div>
 
@@ -87,21 +97,21 @@
                         iSolutions Member</a>
                 </div>
 
-                <div class="content-card support-panel card-disabled">
+                <div class="content-card support-panel">
                     <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">📄 Print Out Version of the Exam
                     </div>
                     <div class="support-text">A full MS Word version with answers and a printable PDF version for a
                         paper-and-pen sitting can be found here.</div>
-                    <button class="btn btn-disabled"
-                        style="display:block; width:100%; padding: 8px; box-sizing:border-box;">Go to SharePoint
-                        Folder</button>
+                    <a href="https://soton.sharepoint.com/biol1004" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-teal" style="display:block; padding: 8px;">Go to SharePoint Folder</a>
                 </div>
 
                 <div class="content-card support-panel card-disabled">
                     <div class="card-title" style="font-size: 14px; margin-bottom: 5px; color:#888;">📅 Live Schedule &
                         Room Booking</div>
                     <div class="support-text" style="color: #999; font-style: italic; margin-bottom: 0;">
-                        No room bookings yet. They’ll appear once the exam is scheduled.
+                        No seating or room data has been allocated. This data panel remains locked until the author
+                        completes all verification runs and final sign-off parameters are satisfied.
                     </div>
                 </div>
             </div>

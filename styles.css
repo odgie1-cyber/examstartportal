@@ -296,6 +296,15 @@ h1 {
     background-color: #10627a
 }
 
+.btn-elearn {
+    background-color: #0C838D;
+    color: #fff
+}
+
+.btn-elearn:hover {
+    background-color: #096b73
+}
+
 .btn-grey {
     background-color: var(--muted);
     color: #fff
@@ -342,6 +351,39 @@ h1 {
     align-items: center
 }
 
+.tryout-result {
+    margin-top: 15px;
+    margin-bottom: 0
+}
+
+.tryout-result-pending {
+    color: var(--status-not-started);
+    background-color: var(--bg-not-started);
+    border-color: #cbd5e1
+}
+
+.tryout-result-pass {
+    color: var(--status-passed);
+    background-color: var(--bg-passed);
+    border-color: var(--status-passed)
+}
+
+.tryout-result-fail {
+    align-items: flex-start;
+    gap: 4px;
+    color: var(--status-attention);
+    background-color: var(--bg-attention);
+    border-color: var(--status-attention)
+}
+
+.tryout-result-message {
+    min-width: 0
+}
+
+.tryout-recovery-actions {
+    margin-top: 15px
+}
+
 .support-panel {
     padding: 15px;
     background-color: #fcfcfc
@@ -354,6 +396,12 @@ h1 {
     margin-bottom: 12px
 }
 
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
 /* Post-exam results guidance */
 .results-guidance {
     margin-top: 10px;
@@ -363,6 +411,10 @@ h1 {
     border-top: 4px solid var(--status-scheduled);
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+}
+
+.dashboard-results-guidance {
+    margin-top: 32px
 }
 
 .results-guidance-header {
@@ -464,6 +516,14 @@ h1 {
 }
 
 /* Dashboard table (restored from original inline styles) */
+.dashboard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 16px
+}
+
 .dashboard-table {
     width: 100%;
     border-collapse: separate;
@@ -793,6 +853,10 @@ h1 {
 
 /* MOBILE RESPONSIVE STYLES */
 @media (max-width: 768px) {
+    .dashboard-actions .btn {
+        width: 100%
+    }
+
     .header-bar {
         flex-direction: column;
         padding: 12px 20px;
