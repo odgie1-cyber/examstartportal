@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam Workspace - BIOL1002 Attention Required</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260720-contact">
 </head>
 
 <body>
@@ -21,14 +21,26 @@
                 <span class="status-dot"></span> Status: Published But Needs Attention
             </div>
             <p class="status-entails">
-                <strong>Attention Required:</strong> Checks found issues in your exam setup. Review the steps below and
-                then run another preview.
+                <strong>Action paused:</strong> Our checks found something we need to discuss with you before this exam
+                can continue. You are not expected to resolve this without guidance.
             </p>
         </div>
         <div class="workspace-status-row" style="margin-bottom:16px;">
             <span class="audit-fail">Audit: Failed</span>
-            <span class="score-fail" style="margin-left:12px;">Score: Fail</span>
+            <span class="score-pending" style="margin-left:12px;">Score: Pending</span>
         </div>
+
+        <section class="conversation-required" aria-labelledby="conversation-required-title">
+            <div class="conversation-required-icon" aria-hidden="true">!</div>
+            <div class="conversation-required-content">
+                <div class="conversation-required-label">Please speak to us</div>
+                <h2 id="conversation-required-title">We need to discuss the audit findings with you</h2>
+                <p>An iSolutions team member will contact you to explain what we found and agree the next steps. If you
+                    see this message before hearing from us, please contact your assigned technical lead.</p>
+            </div>
+            <a href="mailto:d.wall@soton.ac.uk?subject=BIOL1002%20audit%20findings"
+                class="btn btn-attention">Email Dean Wall</a>
+        </section>
 
         <div class="workspace-grid">
 
@@ -43,23 +55,26 @@
                         Platform</a>
                 </div>
 
-                <div class="content-card">
-                    <div class="card-title" style="color: #222;">2. Best Practice Assessment Audit</div>
+                <div class="content-card audit-conversation-card">
+                    <div class="card-title">2. Best Practice Assessment Audit</div>
                     <div class="card-description">
-                        After you build, the system checks your files, settings, and resources.
+                        The audit found an issue that needs a conversation with iSolutions. Please speak with us before
+                        changing the exam or attempting another preview.
                     </div>
-                    <a href="#" class="btn btn-teal" onclick="alert('Opening read-only audit log...');">View Audit
-                        Logs</a>
-                    <div class="failed-indicator">⚠ FAILED</div>
+                    <div class="audit-conversation-status">
+                        <span class="failed-indicator">&#9888; FAILED</span>
+                        <span>Waiting for a discussion with your technical lead</span>
+                    </div>
+                    <a href="mailto:d.wall@soton.ac.uk?subject=BIOL1002%20audit%20findings"
+                        class="btn btn-attention">Contact Technical Lead</a>
                 </div>
 
-                <div class="content-card">
+                <div class="content-card card-disabled">
                     <div class="card-title">3. Execute Required Preview Try-Out</div>
                     <div class="card-description">
-                        Run a preview to check layout, formatting, and answer checks.
+                        This step will become available after the audit findings have been discussed and resolved.
                     </div>
-                    <a href="#" class="btn btn-teal"
-                        onclick="alert('Launching secure testing workspace node...');">Launch Preview Simulation</a>
+                    <button class="btn btn-disabled">Launch Preview Simulation</button>
                 </div>
 
                 <div class="content-card card-disabled">
@@ -68,7 +83,7 @@
                         This step confirms a full run with a clean score before final sign-off.
                     </div>
                     <div class="alert-badge">
-                        ℹ️ 100% Test Pass Status: Incomplete / Tryout Attempt Required
+                        Test score pending until the audit issue is resolved
                     </div>
                     <button class="btn btn-disabled">Trigger Staging Refresh Build</button>
                 </div>

@@ -188,6 +188,92 @@ h1 {
     vertical-align: middle
 }
 
+/* Needs-attention conversation guidance */
+.conversation-required {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #efb6d4;
+    border-left: 6px solid var(--status-attention);
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(209, 0, 116, 0.08)
+}
+
+.conversation-required-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: #fff;
+    background: var(--status-attention);
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 700
+}
+
+.conversation-required-label {
+    margin-bottom: 4px;
+    color: var(--status-attention);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase
+}
+
+.conversation-required h2 {
+    margin: 0 0 6px;
+    color: #222;
+    font-size: 19px;
+    font-weight: 600
+}
+
+.conversation-required p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.btn-attention {
+    color: #fff;
+    background: var(--status-attention);
+    white-space: nowrap
+}
+
+.btn-attention:hover {
+    background: #a9005e
+}
+
+.audit-conversation-card {
+    border: 2px solid var(--status-attention);
+    box-shadow: 0 4px 12px rgba(209, 0, 116, 0.1)
+}
+
+.audit-conversation-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 15px;
+    padding: 10px 12px;
+    color: #6f1646;
+    background: var(--bg-attention);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600
+}
+
+.audit-conversation-status .failed-indicator {
+    flex: 0 0 auto;
+    margin: 0;
+    color: var(--status-attention);
+    font-weight: 800
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -768,6 +854,16 @@ h1 {
         align-items: center;
         justify-content: center;
     }
+
+    .conversation-required {
+        grid-template-columns: auto minmax(0, 1fr);
+        padding: 18px
+    }
+
+    .conversation-required .btn {
+        grid-column: 1 / -1;
+        width: 100%
+    }
 }
 
 @media (max-width: 480px) {
@@ -825,6 +921,22 @@ h1 {
 
     .status-entails {
         font-size: 13px;
+    }
+
+    .conversation-required {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px
+    }
+
+    .conversation-required-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 20px
+    }
+
+    .conversation-required h2 {
+        font-size: 17px
     }
 
     .dashboard-table {
