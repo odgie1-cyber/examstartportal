@@ -1161,6 +1161,12 @@ h1 {
     border: 1px solid #99ddd5
 }
 
+.badge-non-ondemand {
+    background-color: #f2f4f8;
+    color: #4b5568;
+    border: 1px solid #c8ced9
+}
+
 .badge-not-started {
     background-color: var(--bg-not-started);
     color: var(--status-not-started);
@@ -1382,6 +1388,54 @@ h1 {
 
 .status-awaiting-checks .status-dot {
     background-color: var(--status-awaiting-checks)
+}
+
+.status-non-ondemand {
+    border-left: 6px solid #5b6478;
+    background-color: #f2f4f8
+}
+
+.status-non-ondemand .status-badge-row {
+    color: #4b5568
+}
+
+.status-non-ondemand .status-dot {
+    background-color: #5b6478
+}
+
+.alternative-workflow-callout {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #b9c3d4;
+    border-left: 6px solid var(--accent);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+}
+
+.alternative-workflow-callout h2 {
+    margin: 0 0 7px;
+    color: #222;
+    font-size: 19px
+}
+
+.alternative-workflow-callout p {
+    margin: 0 0 14px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.alternative-requirements-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.55
+}
+
+.alternative-requirements-list li + li {
+    margin-top: 6px
 }
 
 /* MOBILE RESPONSIVE STYLES */
