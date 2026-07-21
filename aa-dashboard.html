@@ -19,7 +19,7 @@
                     <div>
                         <div class="dashboard-table-eyebrow">A&amp;A dashboard</div>
                         <h1 id="dashboard-exams-title">All exams</h1>
-                        <p id="dashboard-exams-guidance">View all 99 exams in this assessment period. Select an exam to open its workflow portal.</p>
+                        <p id="dashboard-exams-guidance">View all 102 exams in this assessment period. Select an exam to open its workflow portal.</p>
                     </div>
                     <a href="mailto:serviceline@soton.ac.uk" class="btn btn-teal aa-contact-button">Contact ServiceLine</a>
                 </header>
@@ -29,12 +29,12 @@
                         <div class="dashboard-status-key-item">
                             <span class="badge badge-not-started"><span class="status-dot"
                                     style="background-color: #64748b;"></span>Not Started</span>
-                            <p>The workflow has not begun. Contact the author to get started.</p>
+                            <p>The exam exists, but contact with the author has not begun.</p>
                         </div>
                         <div class="dashboard-status-key-item">
                             <span class="badge badge-awaiting"><span class="status-dot"
                                     style="background-color: #b05d06;"></span>Awaiting Author</span>
-                            <p>Waiting for the author to complete the requested actions.</p>
+                            <p>iSolutions is in contact with the author and gathering the information needed.</p>
                         </div>
                         <div class="dashboard-status-key-item">
                             <span class="badge badge-testing"><span class="status-dot"
@@ -49,7 +49,7 @@
                         <div class="dashboard-status-key-item">
                             <span class="badge badge-scheduled"><span class="status-dot"
                                     style="background-color: #1e7e34;"></span>Scheduled</span>
-                            <p>The exam date, time and room details have been confirmed.</p>
+                            <p>The exam arrangements have been agreed and its date and time recorded.</p>
                         </div>
                         <div class="dashboard-status-key-item">
                             <span class="badge badge-not-started"><span class="status-dot"
@@ -81,6 +81,36 @@
                 </tr>
             </thead>
             <tbody>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand.html';">
+                    <td><strong>MANG1001</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>No author contact recorded</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-awaiting.html';">
+                    <td><strong>MANG1002</strong><span class="dashboard-exam-meta">Exam system: Excel</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>iSolutions is in contact with the author</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-scheduled.html';">
+                    <td><strong>MANG1003</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                    <td><span class="badge badge-scheduled"><span class="status-dot"
+                                style="background-color: #1e7e34;"></span>Scheduled</span></td>
+                    <td>Dean Wall</td>
+                    <td>Exam arrangements agreed</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
                     <td><strong>AICE1003C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
                     <td><span class="badge badge-awaiting"><span class="status-dot"

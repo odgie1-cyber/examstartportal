@@ -65,7 +65,7 @@
                     <div class="ondemand-login-copy">
                         <div class="ondemand-login-eyebrow">OnDemand access</div>
                         <h2 id="ondemand-login-title">Open the exam system</h2>
-                        <p>Use Questionmark OnDemand when your exam workflow asks you to update or try out your exam. Log in with your University account.</p>
+                        <p>This link only works if iSolutions has created an OnDemand account for you. If you do not have an account yet, please contact iSolutions. Guidance can be found in the Useful links section.</p>
                     </div>
                     <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
                         class="btn btn-teal btn-ondemand-login">Log in to OnDemand</a>
@@ -89,7 +89,7 @@
             </thead>
             <tbody>
                 <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
-                    <td><strong>BIOL1001</strong><br><span style="color:#666; font-size:12px;">Intro to Biol</span></td>
+                    <td><strong>BIOL1001</strong><br><span style="color:#666; font-size:12px;">Intro to Biol</span><span class="dashboard-exam-meta">Exam system: OnDemand</span></td>
                     <td><span class="badge badge-awaiting"><span class="status-dot"
                                 style="background-color: #b05d06;"></span>Awaiting Author</span></td>
                     <td>Dean Wall</td>
@@ -101,7 +101,7 @@
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
                     <td><strong>BIOL1002</strong><br><span style="color:#666; font-size:12px;">The Birds and the
-                            Bees</span>
+                            Bees</span><span class="dashboard-exam-meta">Exam system: OnDemand</span>
                     </td>
                     <td><span class="badge badge-testing"><span class="status-dot"
                                 style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
@@ -113,7 +113,7 @@
                             class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1002 SharePoint files</a></td>
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-tryout-failed.html';">
-                    <td><strong>BIOL1004</strong><br><span style="color:#666; font-size:12px;">Marine Ecosystems</span>
+                    <td><strong>BIOL1004</strong><br><span style="color:#666; font-size:12px;">Marine Ecosystems</span><span class="dashboard-exam-meta">Exam system: OnDemand</span>
                     </td>
                     <td><span class="badge badge-testing"><span class="status-dot"
                                 style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
@@ -125,7 +125,7 @@
                             class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1004 SharePoint files</a></td>
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-ready.html';">
-                    <td><strong>BIOL1005</strong><br><span style="color:#666; font-size:12px;">Genetics and Evolution</span></td>
+                    <td><strong>BIOL1005</strong><br><span style="color:#666; font-size:12px;">Genetics and Evolution</span><span class="dashboard-exam-meta">Exam system: OnDemand</span></td>
                     <td><span class="badge badge-ready"><span class="status-dot"
                                 style="background-color: #0d9488;"></span>Published Passed Checks</span></td>
                     <td>Dean Wall</td>
@@ -136,7 +136,7 @@
                             class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1005 SharePoint files</a></td>
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-complete.html';">
-                    <td><strong>BIOL1003</strong><br><span style="color:#666; font-size:12px;">Offspring rearing</span>
+                    <td><strong>BIOL1003</strong><br><span style="color:#666; font-size:12px;">Offspring rearing</span><span class="dashboard-exam-meta">Exam system: OnDemand</span>
                     </td>
                     <td><span class="badge badge-scheduled"><span class="status-dot"
                                 style="background-color: #1e7e34;"></span>Scheduled</span></td>
@@ -149,7 +149,7 @@
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-failed.html';">
                     <td><strong>BIOL1002</strong><br><span style="color:#666; font-size:12px;">The Birds and the
-                            Bees</span>
+                            Bees</span><span class="dashboard-exam-meta">Exam system: OnDemand</span>
                     </td>
                     <td><span class="badge badge-attention"><span class="status-dot"
                                 style="background-color: #d10074;"></span>Published But Needs Attention</span></td>
@@ -161,15 +161,34 @@
                             class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1002 SharePoint files</a></td>
                 </tr>
                 <tr class="clickable-row" onclick="window.location='workspace-non-ondemand.html';">
-                    <td><strong>MANG1001</strong><br><span style="color:#666; font-size:12px;">Alternative assessment workflow</span></td>
-                    <td><span class="badge badge-non-ondemand"><span class="status-dot"
-                                style="background-color: #5b6478;"></span>Non-OnDemand</span></td>
+                    <td><strong>MANG1001</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
                     <td>Dean Wall</td>
-                    <td>Review requirements and contact iSolutions</td>
+                    <td>The workflow has not begun</td>
                     <td><span class="score-na">Not applicable</span></td>
                     <td><span class="score-na">Not applicable</span></td>
-                    <td><a href="https://soton.sharepoint.com/mang1001" target="_blank" rel="noopener noreferrer"
-                            class="btn-sharepoint" onclick="event.stopPropagation();">Open MANG1001 SharePoint files</a></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-awaiting.html';">
+                    <td><strong>MANG1002</strong><span class="dashboard-exam-meta">Exam system: Excel</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>iSolutions is trying to contact you</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-scheduled.html';">
+                    <td><strong>MANG1003</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                    <td><span class="badge badge-scheduled"><span class="status-dot"
+                                style="background-color: #1e7e34;"></span>Scheduled</span></td>
+                    <td>Dean Wall</td>
+                    <td>The exam arrangements have been agreed</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
                 </tr>
             </tbody>
                 </table>

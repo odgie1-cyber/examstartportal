@@ -575,6 +575,20 @@ h1 {
     display: none !important
 }
 
+.footer-bar .demo-workflow-switch {
+    padding: 8px 13px;
+    color: var(--primary);
+    background: #fff;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    font-weight: 700
+}
+
+.footer-bar .demo-workflow-switch:hover {
+    color: #fff;
+    background: var(--primary)
+}
+
 /* Dashboard table (restored from original inline styles) */
 .dashboard-container {
     max-width: 1440px
@@ -654,6 +668,14 @@ h1 {
 }
 
 .aa-dashboard-container .dashboard-content {
+    grid-column: 1
+}
+
+.non-ondemand-dashboard-container .dashboard-layout {
+    grid-template-columns: minmax(0, 1fr)
+}
+
+.non-ondemand-dashboard-container .dashboard-content {
     grid-column: 1
 }
 
@@ -1050,19 +1072,23 @@ h1 {
 
 /* Column widths to better match workspace content */
 .dashboard-table th.col-exam {
-    width: 26%;
-}
-
-.dashboard-table th.col-status {
     width: 20%;
 }
 
+.dashboard-table th.col-system {
+    width: 10%;
+}
+
+.dashboard-table th.col-status {
+    width: 18%;
+}
+
 .dashboard-table th.col-lead {
-    width: 12%;
+    width: 10%;
 }
 
 .dashboard-table th.col-action {
-    width: 16%;
+    width: 18%;
 }
 
 .dashboard-table th.col-audit {
@@ -1074,11 +1100,11 @@ h1 {
 }
 
 .dashboard-table th.col-share {
-    width: 10%;
+    width: 18%;
 }
 
 .dashboard-table td {
-    padding: 16px 20px;
+    padding: 16px 14px;
     font-size: 14px;
     border-bottom: 1px solid #dfdfdf;
     vertical-align: middle;
@@ -1092,16 +1118,16 @@ h1 {
     line-height: 1.35
 }
 
-/* Center the Current Status column (second column) */
+/* Center the Current Status column (third column) */
 .dashboard-table th.col-status,
-.dashboard-table td:nth-child(2) {
+.dashboard-table td:nth-child(3) {
     text-align: center;
     white-space: nowrap;
     font-size: 12px;
 }
 
 /* Tighter badge styling inside the status column to keep content on one line */
-.dashboard-table td:nth-child(2) .badge {
+.dashboard-table td:nth-child(3) .badge {
     padding: 4px 8px;
     font-size: 11px;
 }
@@ -1403,6 +1429,19 @@ h1 {
     background-color: #5b6478
 }
 
+.status-not-started {
+    border-left: 6px solid var(--status-not-started);
+    background-color: var(--bg-not-started)
+}
+
+.status-not-started .status-badge-row {
+    color: var(--status-not-started)
+}
+
+.status-not-started .status-dot {
+    background-color: var(--status-not-started)
+}
+
 .alternative-workflow-callout {
     margin-bottom: 24px;
     padding: 20px;
@@ -1594,32 +1633,8 @@ h1 {
         text-transform: uppercase
     }
 
-    .dashboard-table td:nth-child(1)::before {
-        content: "Exam / Module"
-    }
-
-    .dashboard-table td:nth-child(2)::before {
-        content: "Current Status"
-    }
-
-    .dashboard-table td:nth-child(3)::before {
-        content: "iSolutions Lead"
-    }
-
-    .dashboard-table td:nth-child(4)::before {
-        content: "Action Required"
-    }
-
-    .dashboard-table td:nth-child(5)::before {
-        content: "Quality Checks"
-    }
-
-    .dashboard-table td:nth-child(6)::before {
-        content: "Tryout"
-    }
-
-    .dashboard-table td:nth-child(7)::before {
-        content: "SharePoint"
+    .dashboard-table td::before {
+        content: attr(data-label)
     }
 
     .dashboard-table td:nth-last-child(-n + 2) {

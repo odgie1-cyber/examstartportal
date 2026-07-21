@@ -5,6 +5,52 @@ document.addEventListener('DOMContentLoaded', function () {
         var tbody = table.tBodies[0];
         if (!tbody) return;
 
+        var headingRow = table.tHead && table.tHead.rows[0];
+        if (!headingRow) return;
+
+        var leadColumnIndex = -1;
+        Array.prototype.forEach.call(headingRow.cells, function (heading, index) {
+            if (heading.textContent.trim() === 'iSolutions Lead') leadColumnIndex = index;
+        });
+        if (leadColumnIndex !== -1) {
+            Array.prototype.forEach.call(tbody.rows, function (row) {
+                if (row.cells[leadColumnIndex]) row.deleteCell(leadColumnIndex);
+            });
+            headingRow.deleteCell(leadColumnIndex);
+        }
+
+        var systemHeading = document.createElement('th');
+        systemHeading.className = 'col-system';
+        systemHeading.textContent = 'Exam System';
+        headingRow.insertBefore(systemHeading, headingRow.cells[1]);
+
+        Array.prototype.forEach.call(tbody.rows, function (row) {
+            var examCell = row.cells[0];
+            var systemName = 'OnDemand';
+            var metadata = examCell.querySelectorAll('.dashboard-exam-meta');
+
+            Array.prototype.forEach.call(metadata, function (item) {
+                var match = item.textContent.trim().match(/^Exam system:\s*(.+)$/i);
+                if (match) {
+                    systemName = match[1];
+                    item.remove();
+                }
+            });
+
+            var systemCell = document.createElement('td');
+            systemCell.textContent = systemName;
+            row.insertBefore(systemCell, row.cells[1]);
+        });
+
+        var headingLabels = Array.prototype.map.call(headingRow.cells, function (heading) {
+            return heading.textContent.trim();
+        });
+        Array.prototype.forEach.call(tbody.rows, function (row) {
+            Array.prototype.forEach.call(row.cells, function (cell, index) {
+                cell.setAttribute('data-label', headingLabels[index]);
+            });
+        });
+
         var rows = Array.prototype.slice.call(tbody.rows);
         var content = table.closest('.dashboard-content');
         var filter = content ? content.querySelector('[data-table-filter]') : null;
@@ -36,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
             emptyMessage.hidden = visibleCount !== 0;
         }
 
-        Array.prototype.forEach.call(table.tHead.rows[0].cells, function (heading, columnIndex) {
+        Array.prototype.forEach.call(headingRow.cells, function (heading, columnIndex) {
             var label = heading.textContent.trim();
             var button = document.createElement('button');
 
@@ -67,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     tbody.appendChild(row);
                 });
 
-                Array.prototype.forEach.call(table.tHead.rows[0].cells, function (otherHeading) {
+                Array.prototype.forEach.call(headingRow.cells, function (otherHeading) {
                     otherHeading.setAttribute('aria-sort', 'none');
                 });
                 heading.setAttribute('aria-sort', direction);

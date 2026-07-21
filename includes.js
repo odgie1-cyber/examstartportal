@@ -14,18 +14,27 @@ document.addEventListener('DOMContentLoaded', function () {
         '<a href="#">University Contacts</a>' +
         '<a href="#">IT Help</a>' +
         '<a href="dashboard-with-warning.html" class="demo-warning-switch" hidden>Show warning</a>' +
+        '<a href="non-ondemand-dashboard.html" class="demo-workflow-switch">Demo Non-OnDemand exams</a>' +
         '<a href="aa-dashboard.html" class="demo-role-switch">Switch to A&amp;A</a>' +
         '</div>';
 
     function configureDemoRoleSwitch(container) {
         var roleSwitch = container.querySelector('.demo-role-switch');
         var warningSwitch = container.querySelector('.demo-warning-switch');
+        var workflowSwitch = container.querySelector('.demo-workflow-switch');
         if (!roleSwitch) return;
 
         var currentPage = window.location.pathname.split('/').pop().toLowerCase();
         if (currentPage === 'aa-dashboard.html') {
             roleSwitch.href = 'dashboard.html';
             roleSwitch.textContent = 'Switch to Author';
+        }
+
+        var isNonOnDemandView = currentPage === 'non-ondemand-dashboard.html' ||
+            currentPage.indexOf('workspace-non-ondemand') === 0;
+        if (workflowSwitch && isNonOnDemandView) {
+            workflowSwitch.href = 'dashboard.html';
+            workflowSwitch.textContent = 'Return to combined Author view';
         }
 
         if (warningSwitch && currentPage === 'dashboard.html') {
