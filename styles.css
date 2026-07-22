@@ -71,6 +71,13 @@ body {
     font-weight: 500
 }
 
+.nav-links .demo-unavailable {
+    color: #dbe7ea;
+    cursor: default;
+    font-weight: 500;
+    opacity: .8
+}
+
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -543,6 +550,11 @@ h1 {
     color: var(--primary);
     text-decoration: none;
     margin: 0;
+}
+
+.footer-bar .demo-unavailable {
+    color: #66757b;
+    cursor: default
 }
 
 .footer-bar .demo-role-switch {

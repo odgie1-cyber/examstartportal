@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', function () {
         '</div>' +
         '<div class="nav-links">' +
         '<a href="dashboard.html">Dashboard</a>' +
-        '<a href="#">Session Search</a>' +
-        '<a href="#">Help</a>' +
+        '<span class="demo-unavailable" title="Available in the live service">Session Search (live service)</span>' +
+        '<span class="demo-unavailable" title="Available in the live service">Help (live service)</span>' +
         '</div>';
 
     var footerMarkup = '<div class="footer-bar">' +
-        '<a href="#">Accessibility statement</a>' +
-        '<a href="#">Freedom of information</a>' +
-        '<a href="#">University Contacts</a>' +
-        '<a href="#">IT Help</a>' +
+        '<span class="demo-unavailable">Accessibility statement (live service)</span>' +
+        '<span class="demo-unavailable">Freedom of information (live service)</span>' +
+        '<span class="demo-unavailable">University contacts (live service)</span>' +
+        '<span class="demo-unavailable">IT help (live service)</span>' +
         '<a href="dashboard-with-warning.html" class="demo-warning-switch" hidden>Show warning</a>' +
         '<a href="non-ondemand-dashboard.html" class="demo-workflow-switch">Demo Non-OnDemand exams</a>' +
         '<a href="aa-dashboard.html" class="demo-role-switch">Switch to A&amp;A</a>' +
