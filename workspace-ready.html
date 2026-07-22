@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam Workspace - BIOL1005 Ready for Scheduling</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260722-4">
 </head>
 
 <body>
@@ -55,10 +55,12 @@
                     <div class="card-description">
                         The technical and best-practice checks have been completed successfully.
                     </div>
-                    <button type="button" class="btn btn-teal"
-                        onclick="alert('Demo only: the live service will open the read-only quality check results.');">Preview Quality
-                        Check Results</button>
-                    <div class="alert-badge tryout-result tryout-result-pass">Quality checks passed.</div>
+                    <div class="quality-check-footer">
+                        <button type="button" class="btn btn-teal"
+                            onclick="alert('Demo only: the live service will open the read-only quality check results.');">Preview Quality
+                            Check Results</button>
+                        <div class="alert-badge tryout-result tryout-result-pass quality-result-pill">&#10003; Quality checks passed</div>
+                    </div>
                 </div>
 
                 <div class="content-card">
