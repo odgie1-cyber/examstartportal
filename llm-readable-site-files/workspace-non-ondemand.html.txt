@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Workspace - MANG1001 Not Started</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <div class="main-container">
+        <a href="non-ondemand-dashboard.html" class="back-link">&larr; Back to Non-OnDemand exams</a>
+        <h1>MANG1001</h1>
+
+        <div class="status-hero status-not-started">
+            <div class="status-badge-row"><span class="status-dot"></span> Status: Not Started</div>
+            <p class="status-entails">
+                <strong>What this means:</strong> This exam exists in ExamStart, but its workflow has not begun. You do
+                not need to do anything at this stage.
+            </p>
+        </div>
+
+        <section class="alternative-workflow-callout" aria-labelledby="contact-title">
+            <h2 id="contact-title">Your iSolutions Lead</h2>
+            <p><strong>Dean Wall</strong> is the iSolutions Lead for this exam. Contact Dean if you think this exam
+                should already be in progress.</p>
+            <a href="mailto:d.wall@soton.ac.uk?subject=MANG1001%20exam" class="btn btn-teal">Email Dean Wall</a>
+        </section>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+</body>
+
+</html>

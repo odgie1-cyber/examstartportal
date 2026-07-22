@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Workspace - BIOL1006 Attention Required</title>
+    <link rel="stylesheet" href="styles.css?v=20260720-contact">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <div class="main-container">
+        <a href="dashboard.html" class="back-link">← Back to My Dashboard</a>
+        <h1>Human Physiology (BIOL1006)</h1>
+
+        <div class="status-hero status-attention">
+            <div class="status-badge-row">
+                <span class="status-dot"></span> Status: Published But Needs Attention
+            </div>
+            <p class="status-entails">
+                <strong>Action paused:</strong> Our checks found something we need to discuss with you before this exam
+                can continue. You are not expected to resolve this without guidance.
+            </p>
+        </div>
+        <div class="workspace-status-row">
+            <span class="audit-fail">Quality Checks: Failed</span>
+            <span class="score-pending">Tryout: Pending</span>
+        </div>
+
+        <section class="conversation-required" aria-labelledby="conversation-required-title">
+            <div class="conversation-required-icon" aria-hidden="true">!</div>
+            <div class="conversation-required-content">
+                <div class="conversation-required-label">Please speak to us</div>
+                <h2 id="conversation-required-title">We need to discuss the audit findings with you</h2>
+                <p>An iSolutions team member will contact you to explain what we found and agree the next steps. If you
+                    see this message before hearing from us, please contact your assigned technical lead.</p>
+            </div>
+            <a href="mailto:d.wall@soton.ac.uk?subject=BIOL1006%20audit%20findings"
+                class="btn btn-attention">Email Dean Wall</a>
+        </section>
+
+        <div class="workspace-grid">
+
+            <div class="left-column">
+
+                <div class="content-card">
+                    <div class="card-title">1. Create Exam in OnDemand</div>
+                    <div class="card-description">
+                        Open OnDemand using the link below and add your questions and rubric to the relevant folders.
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-teal">Log in to OnDemand</a>
+                        <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-elearn">View OnDemand Guidance</a>
+                    </div>
+                </div>
+
+                <div class="content-card audit-conversation-card">
+                    <div class="card-title">2. Best Practice Quality Checks</div>
+                    <div class="card-description">
+                        We check your exam against known best practices, and the results are shown here. We will contact
+                        you if we notice anything that needs your attention or if we make any changes.
+                    </div>
+                    <div class="audit-conversation-status">
+                        <span class="failed-indicator">&#9888; FAILED</span>
+                        <span>Waiting for a discussion with your technical lead</span>
+                    </div>
+                    <div class="card-actions">
+                        <button type="button" class="btn btn-teal"
+                            onclick="alert('Demo only: the live service will open the quality check results.');">Preview Quality Check
+                            Results</button>
+                        <a href="mailto:d.wall@soton.ac.uk?subject=BIOL1006%20audit%20findings"
+                            class="btn btn-attention">Contact Technical Lead</a>
+                    </div>
+                </div>
+
+                <div class="content-card card-disabled">
+                    <div class="card-title">3. Try Out Your Exam and View Results</div>
+                    <div class="card-description">
+                        Use this button to try out your exam. You should be able to score 100% on this version. If you do
+                        not, please let us know, and we can produce a breakdown report showing where things went wrong.
+                    </div>
+                    <button class="btn btn-disabled">Try Out Exam</button>
+                    <div class="alert-badge tryout-result tryout-result-pending">Pending: No one has attempted a tryout
+                        yet.</div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="content-card support-panel">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">⚙️ iSolutions Member
+                    </div>
+                    <div class="support-text">
+                        This exam is being configured by <strong>Dean Wall</strong>.
+                    </div>
+                    <div class="support-text">
+                        Need help or have a question? Get in touch.
+                    </div>
+                    <a href="mailto:d.wall@soton.ac.uk" class="btn btn-teal" style="display:block; padding: 8px;">Email
+                        iSolutions Member</a>
+                </div>
+
+                <div class="content-card support-panel">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">📄 Print Out Version of the Exam
+                    </div>
+                    <div class="support-text">A full MS Word version with answers and a printable PDF version for a
+                        paper-and-pen sitting can be found here.</div>
+                    <a href="https://soton.sharepoint.com/biol1006" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-grey" style="display:block; padding: 8px;">Go to SharePoint Folder</a>
+                </div>
+
+                <div class="content-card support-panel card-disabled">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px; color:#888;">📅 Live Schedule &
+                        Room Booking</div>
+                    <div class="support-text" style="color: #999; font-style: italic; margin-bottom: 0;">
+                        No seating or room data has been allocated. This data panel remains locked until the author
+                        completes all verification runs and final sign-off parameters are satisfied.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+
+</body>
+
+</html>

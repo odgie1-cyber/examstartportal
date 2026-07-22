@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamStart Portal - My Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <div class="main-container dashboard-container">
+        <section class="service-news" aria-labelledby="service-news-title">
+            <div class="service-news-icon" aria-hidden="true">!</div>
+            <div class="service-news-content">
+                <div class="service-news-eyebrow">Current service news</div>
+                <h2 id="service-news-title">Use the image tool when adding images in OnDemand</h2>
+                <p>Do not paste images directly into question or choice fields. This can cause unexpected behaviour and may add invalid HTML.</p>
+                <p><strong>What to do:</strong> Select <strong>Add image</strong> in the text field toolbar instead.</p>
+                <p class="service-news-support">If you have any questions, contact <a href="mailto:ServiceLine@soton.ac.uk">ServiceLine@soton.ac.uk</a>.</p>
+            </div>
+        </section>
+
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Exam tools and results guidance">
+                <section class="dashboard-menu-card dashboard-useful-links" aria-labelledby="dashboard-tools-title">
+                    <h2 id="dashboard-tools-title">Useful links</h2>
+                    <div class="dashboard-links-section">
+                        <h3>OnDemand guidance</h3>
+                        <p>Find step-by-step help for preparing, checking and running your exam in OnDemand.</p>
+                    </div>
+                    <div class="dashboard-actions">
+                        <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-elearn">View OnDemand guidance</a>
+                    </div>
+
+                    <div class="dashboard-links-divider"></div>
+
+                    <div class="results-guidance-header" aria-labelledby="dashboard-results-guidance-title">
+                        <h3 id="dashboard-results-guidance-title">After the exam</h3>
+                        <p>Guidance on how to view results.</p>
+                    </div>
+
+                    <div class="results-guidance-options">
+                        <div class="results-option">
+                            <div class="results-option-label">Individual student</div>
+                            <h4>Check a student&rsquo;s score</h4>
+                            <p>Read how to view one student&rsquo;s results report.</p>
+                            <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#see-a-results-report-for-an-individual"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Checker
+                                Guidance</a>
+                        </div>
+
+                        <div class="results-option">
+                            <div class="results-option-label">All students</div>
+                            <h4>Download all scores</h4>
+                            <p>Read how to export a detailed results spreadsheet.</p>
+                            <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#exporting-a-detailed-spreadsheet-of-your-exam-results"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Exporter
+                                Guidance</a>
+                        </div>
+                    </div>
+
+                    <div class="results-warning" role="note">
+                        <strong>Important:</strong> Do not use the Results Exporter until the day after your exam.
+                    </div>
+                    <p class="results-alternative">Alternatively, request your results from iSolutions.</p>
+                </section>
+            </aside>
+
+            <main class="dashboard-content">
+                <section class="ondemand-login-card" aria-labelledby="ondemand-login-title">
+                    <div class="ondemand-login-copy">
+                        <div class="ondemand-login-eyebrow">OnDemand access</div>
+                        <h2 id="ondemand-login-title">Open the exam system</h2>
+                        <p>This link only works if iSolutions has created an OnDemand account for you. If you do not have an account yet, please contact iSolutions. Guidance can be found in the Useful links section.</p>
+                    </div>
+                    <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-teal btn-ondemand-login">Log in to OnDemand</a>
+                </section>
+                <header class="dashboard-table-introduction">
+                    <h1 id="dashboard-exams-title">Your exams</h1>
+                    <p id="dashboard-exams-guidance">Select an exam below to open its workflow portal and see what you need to do next.</p>
+                </header>
+                <table id="dashboard-exams-table" class="dashboard-table" data-dashboard-table
+                    aria-labelledby="dashboard-exams-title" aria-describedby="dashboard-exams-guidance">
+            <thead>
+                <tr>
+                    <th class="col-exam">Exam / Module</th>
+                    <th class="col-status">Current Status</th>
+                    <th class="col-lead">iSolutions Lead</th>
+                    <th class="col-action">Action Step Required</th>
+                    <th class="col-audit">Quality Checks</th>
+                    <th class="col-score">Tryout</th>
+                    <th class="col-share">SharePoint</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL1001</strong><br><span style="color:#666; font-size:12px;">Intro to Biol</span><span class="dashboard-exam-meta">Exam system: OnDemand</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Add/Configure Questions and Rubric</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1001" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1001 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1002</strong><br><span style="color:#666; font-size:12px;">The Birds and the
+                            Bees</span><span class="dashboard-exam-meta">Exam system: OnDemand</span>
+                    </td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Tryout Exam and Score 100%</td>
+                    <td><span class="audit-pass">Pass</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1002" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1002 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-tryout-failed.html';">
+                    <td><strong>BIOL1004</strong><br><span style="color:#666; font-size:12px;">Marine Ecosystems</span><span class="dashboard-exam-meta">Exam system: OnDemand</span>
+                    </td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Try Out Exam Again or Ask for Results</td>
+                    <td><span class="audit-pass">Pass</span></td>
+                    <td><span class="score-fail">Attempted &ndash; No 100% Yet</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1004" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1004 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-ready.html';">
+                    <td><strong>BIOL1005</strong><br><span style="color:#666; font-size:12px;">Genetics and Evolution</span><span class="dashboard-exam-meta">Exam system: OnDemand</span></td>
+                    <td><span class="badge badge-ready"><span class="status-dot"
+                                style="background-color: #0d9488;"></span>Published Passed Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Ready to Be Scheduled</td>
+                    <td><span class="audit-pass">Pass</span></td>
+                    <td><span class="score-pass">Pass</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1005" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1005 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-complete.html';">
+                    <td><strong>BIOL1003</strong><br><span style="color:#666; font-size:12px;">Offspring rearing</span><span class="dashboard-exam-meta">Exam system: OnDemand</span>
+                    </td>
+                    <td><span class="badge badge-scheduled"><span class="status-dot"
+                                style="background-color: #1e7e34;"></span>Scheduled</span></td>
+                    <td>Dean Wall</td>
+                    <td style="font-style: italic;">Exam Scheduled</td>
+                    <td><span class="audit-pass">Pass</span></td>
+                    <td><span class="score-pass">Pass</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1003" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1003 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-failed.html';">
+                    <td><strong>BIOL1006</strong><br><span style="color:#666; font-size:12px;">Human Physiology</span><span class="dashboard-exam-meta">Exam system: OnDemand</span>
+                    </td>
+                    <td><span class="badge badge-attention"><span class="status-dot"
+                                style="background-color: #d10074;"></span>Published But Needs Attention</span></td>
+                    <td>Dean Wall</td>
+                    <td>Speak to iSolutions About Audit Findings</td>
+                    <td><span class="audit-fail">Failed</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1006" target="_blank" rel="noopener noreferrer"
+                            class="btn-sharepoint" onclick="event.stopPropagation();">Open BIOL1006 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand.html';">
+                    <td><strong>MANG1001</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>The workflow has not begun</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-awaiting.html';">
+                    <td><strong>MANG1002</strong><span class="dashboard-exam-meta">Exam system: Excel</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>iSolutions is trying to contact you</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-scheduled.html';">
+                    <td><strong>MANG1003</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                    <td><span class="badge badge-scheduled"><span class="status-dot"
+                                style="background-color: #1e7e34;"></span>Scheduled</span></td>
+                    <td>Dean Wall</td>
+                    <td>The exam arrangements have been agreed</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+            </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+    <script src="dashboard-table.js"></script>
+</body>
+
+</html>

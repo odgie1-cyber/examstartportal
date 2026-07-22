@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamStart Portal - A&amp;A Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <div class="main-container dashboard-container aa-dashboard-container">
+        <div class="dashboard-layout">
+            <main class="dashboard-content">
+                <header class="dashboard-table-introduction aa-dashboard-introduction">
+                    <div>
+                        <div class="dashboard-table-eyebrow">A&amp;A dashboard</div>
+                        <h1 id="dashboard-exams-title">All exams</h1>
+                        <p id="dashboard-exams-guidance">View all 102 exams in this assessment period. Select an exam to open its workflow portal.</p>
+                    </div>
+                    <a href="mailto:serviceline@soton.ac.uk" class="btn btn-teal aa-contact-button">Contact ServiceLine</a>
+                </header>
+                <details class="dashboard-status-key" open>
+                    <summary>Status key</summary>
+                    <div class="dashboard-status-key-items">
+                        <div class="dashboard-status-key-item">
+                            <span class="badge badge-not-started"><span class="status-dot"
+                                    style="background-color: #64748b;"></span>Not Started</span>
+                            <p>The exam exists, but contact with the author has not begun.</p>
+                        </div>
+                        <div class="dashboard-status-key-item">
+                            <span class="badge badge-awaiting"><span class="status-dot"
+                                    style="background-color: #b05d06;"></span>Awaiting Author</span>
+                            <p>iSolutions is in contact with the author and gathering the information needed.</p>
+                        </div>
+                        <div class="dashboard-status-key-item">
+                            <span class="badge badge-testing"><span class="status-dot"
+                                    style="background-color: #147794;"></span>Published Awaiting Checks</span>
+                            <p>The exam is ready for quality checks and a tryout.</p>
+                        </div>
+                        <div class="dashboard-status-key-item">
+                            <span class="badge badge-ready"><span class="status-dot"
+                                    style="background-color: #0d9488;"></span>Published Passed Checks</span>
+                            <p>Quality checks and the 100% tryout have passed. The exam is ready to be scheduled.</p>
+                        </div>
+                        <div class="dashboard-status-key-item">
+                            <span class="badge badge-scheduled"><span class="status-dot"
+                                    style="background-color: #1e7e34;"></span>Scheduled</span>
+                            <p>The exam arrangements have been agreed and its date and time recorded.</p>
+                        </div>
+                        <div class="dashboard-status-key-item">
+                            <span class="badge badge-not-started"><span class="status-dot"
+                                    style="background-color: #64748b;"></span>Not ExamStart</span>
+                            <p>The exam is managed outside ExamStart. No action is required here.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <div class="dashboard-table-tools">
+                    <label for="exam-table-filter">Filter exams</label>
+                    <div class="dashboard-filter-row">
+                        <input id="exam-table-filter" type="search" placeholder="Search exams" data-table-filter
+                            aria-controls="dashboard-exams-table">
+                        <span class="dashboard-table-count" data-table-count aria-live="polite"></span>
+                    </div>
+                </div>
+                <table id="dashboard-exams-table" class="dashboard-table" data-dashboard-table
+                    aria-labelledby="dashboard-exams-title" aria-describedby="dashboard-exams-guidance">
+            <thead>
+                <tr>
+                    <th class="col-exam">Exam / Module</th>
+                    <th class="col-status">Current Status</th>
+                    <th class="col-lead">iSolutions Lead</th>
+                    <th class="col-action">Action Step Required</th>
+                    <th class="col-audit">Quality Checks</th>
+                    <th class="col-score">Tryout</th>
+                    <th class="col-share">SharePoint</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand.html';">
+                    <td><strong>MANG1001</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>No author contact recorded</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-awaiting.html';">
+                    <td><strong>MANG1002</strong><span class="dashboard-exam-meta">Exam system: Excel</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>iSolutions is in contact with the author</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-scheduled.html';">
+                    <td><strong>MANG1003</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                    <td><span class="badge badge-scheduled"><span class="status-dot"
+                                style="background-color: #1e7e34;"></span>Scheduled</span></td>
+                    <td>Dean Wall</td>
+                    <td>Exam arrangements agreed</td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                    <td><span class="score-na">Not applicable</span></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>AICE1003C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/aice1003c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open AICE1003C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>AICE1007C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/aice1007c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open AICE1007C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>AICE1007C3</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/aice1007c3" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open AICE1007C3 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>AICE2005C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/aice2005c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open AICE2005C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1024C1</strong><span class="dashboard-exam-meta">Author: Matthew Bellamy</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1024c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1024C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1024C2</strong><span class="dashboard-exam-meta">Author: Matthew Bellamy</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1024c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1024C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1024C3</strong><span class="dashboard-exam-meta">Author: Matthew Bellamy</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1024c3" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1024C3 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1025C1</strong><span class="dashboard-exam-meta">Author: Marcin Przewloka</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1025c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1025C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL1025C2</strong><span class="dashboard-exam-meta">Author: Marcin Przewloka</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1025c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1025C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL1025C3</strong><span class="dashboard-exam-meta">Author: Marcin Przewloka</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1025c3" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1025C3 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL1026C1</strong><span class="dashboard-exam-meta">Also known as y</span><span class="dashboard-exam-meta">Author: Joern Werner</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1026c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1026C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL1026C2</strong><span class="dashboard-exam-meta">Also known as y</span><span class="dashboard-exam-meta">Author: Joern Werner</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1026c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1026C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL1026C3</strong><span class="dashboard-exam-meta">Also known as y</span><span class="dashboard-exam-meta">Author: Joern Werner</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1026c3" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1026C3 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL1027C1</strong><span class="dashboard-exam-meta">Author: James Dillon</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1027c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1027C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1029C1</strong><span class="dashboard-exam-meta">Author: Jan Janouskovec</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1029c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1029C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1029C2</strong><span class="dashboard-exam-meta">Author: Jan Janouskovec</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1029c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1029C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1029C3</strong><span class="dashboard-exam-meta">Author: Jan Janouskovec</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1029c3" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1029C3 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL1033C1</strong><span class="dashboard-exam-meta">Author: Mark Chapman</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol1033c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL1033C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL2010C1</strong><span class="dashboard-exam-meta">Author: Eamonn Reading</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2010c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2010C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL2012C1</strong><span class="dashboard-exam-meta">Author: Joern Werner</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2012c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2012C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL2013C1</strong><span class="dashboard-exam-meta">Also known as y</span><span class="dashboard-exam-meta">Author: Benjamin Nicholas</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2013c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2013C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL2018C1</strong><span class="dashboard-exam-meta">Author: Herman Wijnen</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2018c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2018C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL2038C1</strong><span class="dashboard-exam-meta">Author: Sandra Wilks</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2038c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2038C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL2044C1</strong><span class="dashboard-exam-meta">Author: Sandra Wilks</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2044c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2044C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL2048C1</strong><span class="dashboard-exam-meta">Author: Mogib Khedr</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2048c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2048C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL2051C1</strong><span class="dashboard-exam-meta">Author: James Dillon</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2051c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2051C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL2056C1</strong><span class="dashboard-exam-meta">Author: Matthew Bellamy</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2056c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2056C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL2058C1</strong><span class="dashboard-exam-meta">Author: Yihua Wang</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2058c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2058C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL2059C1</strong><span class="dashboard-exam-meta">Author: Melissa Andrews</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2059c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2059C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL3020C1</strong><span class="dashboard-exam-meta">Also known as BIOL6034C1</span><span class="dashboard-exam-meta">Author: Herman Wijnen</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol3020c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL3020C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL3025C1</strong><span class="dashboard-exam-meta">Also known as BIOL6036</span><span class="dashboard-exam-meta">Author: Emily Brookes</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol3025c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL3025C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL3057C1</strong><span class="dashboard-exam-meta">Also known as BIOL6047</span><span class="dashboard-exam-meta">Author: Franklin Nobrega</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol3057c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL3057C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL3057C2</strong><span class="dashboard-exam-meta">Also known as BIOL6047</span><span class="dashboard-exam-meta">Author: Franklin Nobrega</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol3057c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL3057C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>BIOL3074C1</strong><span class="dashboard-exam-meta">Also known as BIOL6096</span><span class="dashboard-exam-meta">Author: Jasmin Godbold</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol3074c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL3074C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL3076C1</strong><span class="dashboard-exam-meta">Author: Fatima Pereira</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol3076c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL3076C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL6103C1</strong><span class="dashboard-exam-meta">Author: Fatima Pereira</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol6103c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL6103C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>CENV2026C1</strong><span class="dashboard-exam-meta">Author: Sergio Maldonado</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/cenv2026c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open CENV2026C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP1312C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp1312c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP1312C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP1313C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp1313c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP1313C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP1313W5</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp1313w5" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP1313W5 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP1314C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp1314c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP1314C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP1323C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp1323c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP1323C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP1324C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp1324c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP1324C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP1324C3</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp1324c3" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP1324C3 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP2311C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp2311c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP2311C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP2312C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp2312c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP2312C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP2323C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp2323c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP2323C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP3200C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp3200c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP3200C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP3208C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp3208c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP3208C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP6203C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp6203c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP6203C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP6237C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp6237c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP6237C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>COMP6250C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/comp6250c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open COMP6250C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>ELEC1312C1</strong><span class="dashboard-exam-meta">Author: Jules Field</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/elec1312c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open ELEC1312C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>FEEG1203C1</strong><span class="dashboard-exam-meta">Author: Benjamin Cameron</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/feeg1203c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open FEEG1203C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>FEEG6002C1</strong><span class="dashboard-exam-meta">Author: Ranga Dinesh Kahanda Koralage</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/feeg6002c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open FEEG6002C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>GGES1001C1</strong><span class="dashboard-exam-meta">Author: Vicky Dominguez Almela</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/gges1001c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open GGES1001C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>GGES1006C1</strong><span class="dashboard-exam-meta">Author: Jane Hart</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not ExamStart</span></td>
+                    <td>Dean Wall</td>
+                    <td>No ExamStart action required</td>
+                    <td><span class="score-na">Not required</span></td>
+                    <td><span class="score-na">Not required</span></td>
+                    <td><a href="https://soton.sharepoint.com/gges1006c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open GGES1006C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>GGES1011C1</strong><span class="dashboard-exam-meta">Author: Eli Lazarus</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/gges1011c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open GGES1011C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MANG2075C1</strong><span class="dashboard-exam-meta">Author: Martin Enilov</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/mang2075c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MANG2075C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI0015C1</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi0015c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI0015C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI0016C1</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi0016c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI0016C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI1035C1</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi1035c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI1035C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI1035C2</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi1035c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI1035C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI2038C1</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi2038c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI2038C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI2038C2</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi2038c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI2038C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI2048C1</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi2048c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI2048C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI2048C2</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi2048c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI2048C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI3039C1</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi3039c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI3039C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI3039C2</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi3039c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI3039C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI3046C1</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi3046c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI3046C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI3046C2</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi3046c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI3046C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI3057C1</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi3057c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI3057C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>MEDI3057C2</strong><span class="dashboard-exam-meta">Author not recorded</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/medi3057c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open MEDI3057C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PHYS1005C1</strong><span class="dashboard-exam-meta">Also known as Y</span><span class="dashboard-exam-meta">Author: Sandra De Jesus Raimundo</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/phys1005c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PHYS1005C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PHYS2032C1</strong><span class="dashboard-exam-meta">Author: Hendrik Ulbricht</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/phys2032c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PHYS2032C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PSYC1017C1</strong><span class="dashboard-exam-meta">Author: Marie Levorsen</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc1017c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC1017C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PSYC1018C1</strong><span class="dashboard-exam-meta">Author: Aiden Gregg</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc1018c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC1018C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>PSYC1022C1</strong><span class="dashboard-exam-meta">Author: Tina Seabrooke</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc1022c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC1022C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PSYC2007C1</strong><span class="dashboard-exam-meta">Author: Jana Kreppner</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc2007c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC2007C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PSYC2019C1</strong><span class="dashboard-exam-meta">Author: Sylwia Cisek</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc2019c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC2019C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>PSYC2025C1</strong><span class="dashboard-exam-meta">Author: Nicholas Kelley</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc2025c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC2025C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PSYC3010C1</strong><span class="dashboard-exam-meta">Author: Kathy Carnelley</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc3010c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC3010C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PSYC3064C1</strong><span class="dashboard-exam-meta">Author: Jacob Juhl</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc3064c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC3064C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>PSYC6055C1</strong><span class="dashboard-exam-meta">Author: Denis Drieghe</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not ExamStart</span></td>
+                    <td>Dean Wall</td>
+                    <td>No ExamStart action required</td>
+                    <td><span class="score-na">Not required</span></td>
+                    <td><span class="score-na">Not required</span></td>
+                    <td><a href="https://soton.sharepoint.com/psyc6055c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open PSYC6055C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SESM6052C1</strong><span class="dashboard-exam-meta">Author: Georges Limbert</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/sesm6052c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SESM6052C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SOES1002C1</strong><span class="dashboard-exam-meta">Author: Lisa Mcneill</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not ExamStart</span></td>
+                    <td>Dean Wall</td>
+                    <td>No ExamStart action required</td>
+                    <td><span class="score-na">Not required</span></td>
+                    <td><span class="score-na">Not required</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes1002c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES1002C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SOES1005C1</strong><span class="dashboard-exam-meta">Author: Rachael James</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes1005c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES1005C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SOES1006C1</strong><span class="dashboard-exam-meta">Author: Martina Stiasny</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes1006c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES1006C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>SOES1007C1</strong><span class="dashboard-exam-meta">Author: Phillip Fenberg</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes1007c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES1007C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>SOES1008C1</strong><span class="dashboard-exam-meta">Author: Jonathan Bull</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes1008c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES1008C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SOES1009C1</strong><span class="dashboard-exam-meta">Author: Richard Stockey</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes1009c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES1009C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SOES2004C1</strong><span class="dashboard-exam-meta">Author: Clara Waelkens</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes2004c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES2004C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>SOES2017C1</strong><span class="dashboard-exam-meta">Author: Martin Solan</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes2017c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES2017C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SOES2040C1</strong><span class="dashboard-exam-meta">Author: Clara Waelkens</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes2040c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES2040C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SOES3057C1</strong><span class="dashboard-exam-meta">Author: Lauren Nadler</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes3057c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES3057C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>UOSM2031C1</strong><span class="dashboard-exam-meta">Author: Orestis Katsamenis</span></td>
+                    <td><span class="badge badge-not-started"><span class="status-dot"
+                                style="background-color: #64748b;"></span>Not Started</span></td>
+                    <td>Dean Wall</td>
+                    <td>Contact author and start workflow</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/uosm2031c1" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open UOSM2031C1 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-testing.html';">
+                    <td><strong>HSGM1003</strong><span class="dashboard-exam-meta">Author: Chris Franks</span></td>
+                    <td><span class="badge badge-testing"><span class="status-dot"
+                                style="background-color: #147794;"></span>Published Awaiting Checks</span></td>
+                    <td>Dean Wall</td>
+                    <td>Complete quality checks and tryout</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/hsgm1003" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open HSGM1003 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>BIOL2013C2</strong><span class="dashboard-exam-meta">Also known as Alt Supp</span><span class="dashboard-exam-meta">Author: Benjamin Nicholas</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/biol2013c2" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open BIOL2013C2 SharePoint files</a></td>
+                </tr>
+                <tr class="clickable-row" onclick="window.location='workspace-awaiting.html';">
+                    <td><strong>SOES3058</strong><span class="dashboard-exam-meta">Author: Christopher Goatley</span></td>
+                    <td><span class="badge badge-awaiting"><span class="status-dot"
+                                style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                    <td>Dean Wall</td>
+                    <td>Follow up with author</td>
+                    <td><span class="audit-pending">Pending</span></td>
+                    <td><span class="score-pending">Pending</span></td>
+                    <td><a href="https://soton.sharepoint.com/soes3058" target="_blank"
+                            rel="noopener noreferrer" class="btn-sharepoint"
+                            onclick="event.stopPropagation();">Open SOES3058 SharePoint files</a></td>
+                </tr>
+            </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+    <script src="dashboard-table.js"></script>
+</body>
+
+</html>

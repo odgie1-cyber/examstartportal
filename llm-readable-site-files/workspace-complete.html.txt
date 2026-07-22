@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Workspace - BIOL1003 Complete</title>
+    <link rel="stylesheet" href="styles.css?v=20260720-results">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <div class="main-container">
+        <a href="dashboard.html" class="back-link">← Back to My Dashboard</a>
+        <h1>Offspring rearing (BIOL1003)</h1>
+
+        <div class="status-hero status-scheduled">
+            <div class="status-badge-row">
+                <span class="status-dot"></span> Status: Scheduled
+            </div>
+            <p class="status-entails">
+                <strong>Workflow Complete:</strong> This exam is approved and scheduled. Room bookings are listed below.
+                Information about obtaining results can be found at the bottom of this page.
+            </p>
+        </div>
+        <div class="workspace-status-row">
+            <span class="audit-pass">Quality Checks: Pass</span>
+            <span class="score-pass">Tryout: Pass</span>
+        </div>
+
+        <div class="workspace-grid">
+
+            <div class="left-column">
+
+                <div class="content-card">
+                    <div class="card-title">1. Create Exam in OnDemand</div>
+                    <div class="card-description">
+                        Open OnDemand using the link below and add your questions and rubric to the relevant folders.
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-teal">Log in to OnDemand</a>
+                        <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-elearn">View OnDemand Guidance</a>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-title">2. Best Practice Quality Checks</div>
+                    <div class="card-description">
+                        We check your exam against known best practices, and the results are shown here. We will contact
+                        you if we notice anything that needs your attention or if we make any changes.
+                    </div>
+                    <button class="btn btn-teal">Results of Quality Checks</button>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-title">3. Try Out Your Exam and View Results</div>
+                    <div class="card-description">
+                        Use this button to try out your exam. You should be able to score 100% on this version. If you do
+                        not, please let us know, and we can produce a breakdown report showing where things went wrong.
+                    </div>
+                    <button class="btn btn-teal">Try Out Exam</button>
+                    <div class="alert-badge tryout-result tryout-result-pass">
+                        Tryout passed: an author has scored 100%.
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="content-card support-panel">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">⚙️ iSolutions Member
+                    </div>
+                    <div class="support-text">
+                        This exam is being configured by <strong>Dean Wall</strong>.
+                    </div>
+                    <div class="support-text">
+                        Need help or have a question? Get in touch.
+                    </div>
+                    <a href="mailto:d.wall@soton.ac.uk" class="btn btn-teal" style="display:block; padding: 8px;">Email
+                        iSolutions Member</a>
+                </div>
+
+                <div class="content-card support-panel">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">📄 Print Out Version of the Exam
+                    </div>
+                    <div class="support-text">A full MS Word version with answers and a printable PDF version for a
+                        paper-and-pen sitting can be found here.</div>
+                    <a href="https://soton.sharepoint.com/biol1003" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-teal" style="display:block; padding: 8px;">Go to SharePoint Folder</a>
+                </div>
+
+                <div class="content-card support-panel" style="background-color: #fafbfc; border: 1px solid #c2cbd1;">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 8px; color: #004656;">📅 Live
+                        Schedule & Room Booking</div>
+                    <div class="support-text" style="font-weight: bold; margin-bottom: 5px; color: #222;">
+                        Date: 08/08/2026
+                    </div>
+                    <div class="support-text" style="margin-bottom: 0;">
+                        <span style="display: block; margin-bottom: 4px; font-size: 13px;">📍 <strong>Building 58
+                                Labs:</strong></span>
+                        <ul
+                            style="margin: 0 0 10px 0; padding-left: 20px; font-size: 13px; color: #444; line-height: 1.4;">
+                            <li>B58 - Room 1043</li>
+                            <li>B58 - Room 1047</li>
+                            <li>B58 - Room 1049</li>
+                        </ul>
+                        <span style="display: block; margin-bottom: 4px; font-size: 13px;">📍 <strong>Building 44
+                                Labs:</strong></span>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #444; line-height: 1.4;">
+                            <li>B44 - Room 1061</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="results-guidance" aria-labelledby="results-guidance-title">
+            <div class="results-guidance-header">
+                <div class="results-guidance-eyebrow">After the exam</div>
+                <h2 id="results-guidance-title">Check and export student results</h2>
+                <p>Once the scheduled exam has taken place, use the links below to open guidance for the appropriate
+                    OnDemand results tool in a new tab.</p>
+            </div>
+
+            <div class="results-guidance-options">
+                <div class="results-option">
+                    <div class="results-option-label">Individual student</div>
+                    <h3>Check a student&rsquo;s score</h3>
+                    <p>Read how to view the results report for one student in OnDemand.</p>
+                    <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#see-a-results-report-for-an-individual"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Results Checker
+                        Guidance</a>
+                </div>
+
+                <div class="results-option">
+                    <div class="results-option-label">All students</div>
+                    <h3>Download all scores</h3>
+                    <p>Read how to export a detailed spreadsheet containing the exam results.</p>
+                    <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#exporting-a-detailed-spreadsheet-of-your-exam-results"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Results Exporter
+                        Guidance</a>
+                </div>
+            </div>
+
+            <div class="results-warning" role="note">
+                <strong>Important:</strong> Do not use the Results Exporter until the day after your exam.
+            </div>
+            <p class="results-alternative">Alternatively, request your results from iSolutions.</p>
+        </section>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+
+</body>
+
+</html>

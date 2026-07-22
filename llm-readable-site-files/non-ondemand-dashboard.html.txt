@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamStart Portal - Non-OnDemand Author Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <div class="main-container dashboard-container non-ondemand-dashboard-container">
+        <div class="dashboard-layout">
+            <main class="dashboard-content">
+                <header class="dashboard-table-introduction aa-dashboard-introduction">
+                    <div>
+                        <div class="dashboard-table-eyebrow">Non-OnDemand demo view</div>
+                        <h1 id="dashboard-exams-title">Your non-OnDemand exams</h1>
+                        <p id="dashboard-exams-guidance">
+                            This demo view isolates the Non-OnDemand examples. In the live service, authors see all of
+                            their exams together. Select an exam to see its current status and who to contact.
+                        </p>
+                    </div>
+                    <a href="mailto:serviceline@soton.ac.uk" class="btn btn-teal aa-contact-button">Contact ServiceLine</a>
+                </header>
+
+                <table id="dashboard-exams-table" class="dashboard-table" data-dashboard-table
+                    aria-labelledby="dashboard-exams-title" aria-describedby="dashboard-exams-guidance">
+                    <thead>
+                        <tr>
+                            <th class="col-exam">Exam / Module</th>
+                            <th class="col-status">Current Status</th>
+                            <th class="col-lead">iSolutions Lead</th>
+                            <th class="col-action">What is happening</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="clickable-row" onclick="window.location='workspace-non-ondemand.html';">
+                            <td><strong>MANG1001</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                            <td><span class="badge badge-not-started"><span class="status-dot"
+                                        style="background-color: #64748b;"></span>Not Started</span></td>
+                            <td>Dean Wall</td>
+                            <td>The workflow has not begun</td>
+                        </tr>
+                        <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-awaiting.html';">
+                            <td><strong>MANG1002</strong><span class="dashboard-exam-meta">Exam system: Excel</span></td>
+                            <td><span class="badge badge-awaiting"><span class="status-dot"
+                                        style="background-color: #b05d06;"></span>Awaiting Author</span></td>
+                            <td>Dean Wall</td>
+                            <td>iSolutions is trying to contact you</td>
+                        </tr>
+                        <tr class="clickable-row" onclick="window.location='workspace-non-ondemand-scheduled.html';">
+                            <td><strong>MANG1003</strong><span class="dashboard-exam-meta">Exam system: Moodle</span></td>
+                            <td><span class="badge badge-scheduled"><span class="status-dot"
+                                        style="background-color: #1e7e34;"></span>Scheduled</span></td>
+                            <td>Dean Wall</td>
+                            <td>The exam arrangements have been agreed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+    <script src="dashboard-table.js"></script>
+
+</body>
+
+</html>

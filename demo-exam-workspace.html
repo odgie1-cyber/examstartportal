@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Workspace - MATH1001</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-live-demo-page="workspace">
+    <div id="site-header"></div>
+
+    <div class="main-container">
+        <a href="demo-user-dashboard.html" class="back-link">&larr; Back to My Dashboard</a>
+        <h1><span id="demo-workspace-title">Mathematics 1</span> (<span id="demo-workspace-code">MATH1001</span>)</h1>
+
+        <div id="demo-workspace-hero" class="status-hero status-awaiting">
+            <div class="status-badge-row">
+                <span class="status-dot"></span> Status: <span id="demo-workspace-status">Awaiting Author</span>
+            </div>
+            <p class="status-entails">
+                <strong id="demo-workspace-explanation-prefix">What this means:</strong>
+                <span id="demo-workspace-explanation">Your exam is ready for you to add questions and the marking rubric in OnDemand.</span>
+            </p>
+            <div id="demo-publication-warning" class="status-publication-warning" role="note" hidden>
+                <strong>Please note:</strong> If you make changes to your questions after we have published the exam,
+                we will need to publish it again. You can request this at any time by contacting your iSolutions Lead.
+            </div>
+        </div>
+
+        <div class="workspace-status-row">
+            <span id="demo-workspace-quality" class="audit-pending">Quality Checks: Pending</span>
+            <span id="demo-workspace-tryout" class="score-pending">Tryout: Pending</span>
+        </div>
+
+        <section id="demo-attention-callout" class="conversation-required" aria-labelledby="demo-attention-title" hidden>
+            <div class="conversation-required-icon" aria-hidden="true">!</div>
+            <div class="conversation-required-content">
+                <div class="conversation-required-label">Please speak to us</div>
+                <h2 id="demo-attention-title">We need to discuss the audit findings with you</h2>
+                <p>An iSolutions team member will contact you to explain what we found and agree the next steps. If you
+                    see this message before hearing from us, please contact your assigned technical lead.</p>
+            </div>
+            <a id="demo-attention-email" href="mailto:dean.wall@soton.ac.uk" class="btn btn-attention">Email iSolutions Lead</a>
+        </section>
+
+        <div class="workspace-grid">
+            <div class="left-column">
+                <div id="demo-step-create" class="content-card">
+                    <div class="card-title">1. Create Exam in OnDemand <span id="demo-create-next" class="attention-indicator" hidden>Next Action</span></div>
+                    <div id="demo-create-description" class="card-description">
+                        Open OnDemand using the link below and add your questions and rubric to the relevant folders.
+                    </div>
+                    <div class="card-actions">
+                        <a id="demo-ondemand-action" href="https://ondemand.questionmark.eu" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-teal">Log in to OnDemand</a>
+                        <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-elearn">View OnDemand Guidance</a>
+                    </div>
+                </div>
+
+                <div id="demo-step-quality" class="content-card card-disabled">
+                    <div class="card-title">2. Best Practice Quality Checks <span id="demo-quality-next" class="attention-indicator" hidden>Next Action</span></div>
+                    <div id="demo-quality-description" class="card-description">
+                        We check your exam against known best practices, and the results are shown here. We will contact
+                        you if we notice anything that needs your attention or if we make any changes.
+                    </div>
+                    <div id="demo-quality-footer" class="live-demo-quality-footer">
+                        <div class="card-actions">
+                            <button id="demo-quality-action" type="button" class="btn btn-disabled" disabled>Results of Quality Checks</button>
+                            <a id="demo-quality-contact" href="mailto:dean.wall@soton.ac.uk" class="btn btn-attention" hidden>Contact Technical Lead</a>
+                        </div>
+                        <div id="demo-quality-result" class="alert-badge tryout-result tryout-result-pending" hidden>
+                            <strong id="demo-quality-result-heading" hidden></strong>
+                            <span id="demo-quality-result-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="demo-step-tryout" class="content-card card-disabled">
+                    <div class="card-title">3. Try Out Your Exam and View Results <span id="demo-tryout-next" class="attention-indicator" hidden>Next Action</span></div>
+                    <div id="demo-tryout-description" class="card-description">
+                        Use this button to try out your exam. You should be able to score 100% on this version. If you do
+                        not, please let us know, and we can produce a breakdown report showing where things went wrong.
+                    </div>
+                    <div id="demo-tryout-result" class="alert-badge tryout-result tryout-result-pending">
+                        <strong id="demo-tryout-result-heading" hidden></strong>
+                        <span id="demo-tryout-result-message">Pending: No one has attempted a tryout yet.</span>
+                    </div>
+                    <div id="demo-tryout-actions" class="card-actions tryout-recovery-actions">
+                        <button id="demo-tryout-action" type="button" class="btn btn-disabled" disabled>Preview Try Out Exam</button>
+                        <a id="demo-tryout-results-email" href="mailto:dean.wall@soton.ac.uk" class="btn btn-attention" hidden>Ask for Tryout Results</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="content-card support-panel">
+                    <div id="demo-lead-heading" class="card-title" style="font-size: 14px; margin-bottom: 5px;">iSolutions Member</div>
+                    <div class="support-text">
+                        <span id="demo-lead-introduction">This exam is being configured by</span> <strong id="demo-lead-name">Dean Wall</strong>.
+                    </div>
+                    <div id="demo-lead-help" class="support-text">
+                        Need help or have a question? Get in touch.
+                    </div>
+                    <a id="demo-lead-email" href="mailto:dean.wall@soton.ac.uk" class="btn btn-teal"
+                        style="display:block; padding: 8px;">Email iSolutions Member</a>
+                </div>
+
+                <div class="content-card support-panel">
+                    <div id="demo-print-heading" class="card-title" style="font-size: 14px; margin-bottom: 5px;">Print Out Version of the Exam</div>
+                    <div id="demo-print-description" class="support-text">
+                        A full MS Word version with answers and a printable PDF version for a paper-and-pen sitting can be found here.
+                    </div>
+                    <button id="demo-print-action" type="button" class="btn btn-teal" style="display:block; width:100%; padding: 8px;"
+                        onclick="alert('Demo only: the live service will open this exam\'s SharePoint folder.');">Go to SharePoint Folder</button>
+                </div>
+
+                <div id="demo-schedule-panel" class="content-card support-panel card-disabled">
+                    <div id="demo-schedule-heading" class="card-title" style="font-size: 14px; margin-bottom: 8px;">Live Schedule &amp; Room Booking</div>
+                    <div id="demo-schedule-unavailable" class="support-text" style="color: #777; font-style: italic; margin-bottom: 0;">
+                        No room bookings yet. They&rsquo;ll appear once the exam is scheduled.
+                    </div>
+                    <div id="demo-schedule-details" hidden>
+                        <div class="support-text" style="font-weight: bold; margin-bottom: 5px;">Date: <span id="demo-schedule-date"></span></div>
+                        <div class="support-text" style="font-weight: bold; margin-bottom: 5px;">Time: <span id="demo-schedule-time"></span></div>
+                        <div class="support-text" style="margin-bottom: 8px;">Duration: <span id="demo-schedule-duration"></span></div>
+                        <div class="support-text" style="margin-bottom: 0;"><strong>Rooms:</strong> <span id="demo-schedule-rooms"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="demo-results-guidance" class="results-guidance" aria-labelledby="demo-results-guidance-title" hidden>
+            <div class="results-guidance-header">
+                <div class="results-guidance-eyebrow">After the exam</div>
+                <h2 id="demo-results-guidance-title">Check and export student results</h2>
+                <p>Once the scheduled exam has taken place, use the links below to open guidance for the appropriate
+                    OnDemand results tool in a new tab.</p>
+            </div>
+            <div class="results-guidance-options">
+                <div class="results-option">
+                    <div class="results-option-label">Individual student</div>
+                    <h3>Check a student&rsquo;s score</h3>
+                    <p>Read how to view the results report for one student in OnDemand.</p>
+                    <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#see-a-results-report-for-an-individual"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Results Checker Guidance</a>
+                </div>
+                <div class="results-option">
+                    <div class="results-option-label">All students</div>
+                    <h3>Download all scores</h3>
+                    <p>Read how to export a detailed spreadsheet containing the exam results.</p>
+                    <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#exporting-a-detailed-spreadsheet-of-your-exam-results"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Results Exporter Guidance</a>
+                </div>
+            </div>
+            <div class="results-warning" role="note">
+                <strong>Important:</strong> Do not use the Results Exporter until the day after your exam.
+            </div>
+            <p class="results-alternative">Alternatively, request your results from iSolutions.</p>
+        </section>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+    <script src="live-demo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamStart Live Demo - Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-live-demo-page="admin">
+    <div id="site-header"></div>
+
+    <main class="main-container live-demo-page live-demo-admin-page">
+        <div class="live-demo-page-tools">
+            <a href="demo-user-dashboard.html" class="back-link">&larr; Open Author view</a>
+            <a href="demo-exam-workspace.html" class="btn btn-demo-outline">Open workflow workspace</a>
+        </div>
+
+        <header class="live-demo-admin-header">
+            <div class="dashboard-table-eyebrow">Admin demonstration</div>
+            <h1>Edit the demo exam</h1>
+            <p>Change the exam record and save it. The Author dashboard and workflow workspace will use the same saved data.</p>
+        </header>
+
+        <div class="live-demo-admin-layout">
+            <form id="demo-admin-form" class="live-demo-admin-form">
+                <section class="content-card live-demo-form-section" aria-labelledby="demo-basic-heading">
+                    <h2 id="demo-basic-heading">Exam details</h2>
+                    <div class="live-demo-form-grid">
+                        <div class="live-demo-field">
+                            <label for="demo-admin-code">Module code</label>
+                            <input id="demo-admin-code" name="moduleCode" type="text" required maxlength="20">
+                        </div>
+                        <div class="live-demo-field live-demo-field-wide">
+                            <label for="demo-admin-title">Exam name</label>
+                            <input id="demo-admin-title" name="moduleTitle" type="text" required maxlength="120">
+                        </div>
+                        <div class="live-demo-field live-demo-field-wide">
+                            <label for="demo-admin-status">Lifecycle status</label>
+                            <select id="demo-admin-status" name="lifecycleStatus" required>
+                                <option value="NOT_STARTED">Not Started</option>
+                                <option value="AWAITING_AUTHOR">Awaiting Author</option>
+                                <option value="PUBLISHED_NEEDS_ATTENTION">Published But Needs Attention</option>
+                                <option value="PUBLISHED_AWAITING_CHECKS">Published Awaiting Checks</option>
+                                <option value="PUBLISHED_PASSED_CHECKS">Published Passed Checks</option>
+                                <option value="SCHEDULED">Scheduled</option>
+                            </select>
+                            <p class="live-demo-field-help">This controls which parts of the Author workflow are active.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-card live-demo-form-section" aria-labelledby="demo-people-heading">
+                    <h2 id="demo-people-heading">People</h2>
+                    <div class="live-demo-form-grid">
+                        <div class="live-demo-field">
+                            <label for="demo-admin-author-name">Author name</label>
+                            <input id="demo-admin-author-name" name="authorName" type="text" required maxlength="100">
+                        </div>
+                        <div class="live-demo-field">
+                            <label for="demo-admin-author-email">Author email</label>
+                            <input id="demo-admin-author-email" name="authorEmail" type="email" required maxlength="160">
+                        </div>
+                        <div class="live-demo-field">
+                            <label for="demo-admin-lead-name">iSolutions lead</label>
+                            <input id="demo-admin-lead-name" name="leadName" type="text" required maxlength="100">
+                        </div>
+                        <div class="live-demo-field">
+                            <label for="demo-admin-lead-email">iSolutions lead email</label>
+                            <input id="demo-admin-lead-email" name="leadEmail" type="email" required maxlength="160">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-card live-demo-form-section" aria-labelledby="demo-results-heading">
+                    <h2 id="demo-results-heading">Checks and tryout</h2>
+                    <p class="live-demo-section-intro">These results are independently editable so the demo can show combinations such as an unsuccessful tryout while checks have passed.</p>
+                    <div class="live-demo-form-grid">
+                        <div class="live-demo-field">
+                            <label for="demo-admin-quality">Quality Checks</label>
+                            <select id="demo-admin-quality" name="qualityCheckResult">
+                                <option value="PENDING">Pending</option>
+                                <option value="PASSED">Passed</option>
+                                <option value="FAILED">Failed</option>
+                            </select>
+                        </div>
+                        <div class="live-demo-field">
+                            <label for="demo-admin-tryout">Tryout result</label>
+                            <select id="demo-admin-tryout" name="tryoutResult">
+                                <option value="PENDING">Pending</option>
+                                <option value="PASSED">Passed - 100%</option>
+                                <option value="FAILED">Attempted - no 100% yet</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-card live-demo-form-section" aria-labelledby="demo-schedule-heading">
+                    <h2 id="demo-schedule-heading">Scheduling</h2>
+                    <p class="live-demo-section-intro">These details appear to the Author when the lifecycle status is Scheduled.</p>
+                    <div class="live-demo-form-grid">
+                        <div class="live-demo-field">
+                            <label for="demo-admin-date">Exam date</label>
+                            <input id="demo-admin-date" name="scheduleDate" type="date">
+                        </div>
+                        <div class="live-demo-field">
+                            <label for="demo-admin-time">Start time</label>
+                            <input id="demo-admin-time" name="scheduleTime" type="time">
+                        </div>
+                        <div class="live-demo-field">
+                            <label for="demo-admin-duration">Duration in minutes</label>
+                            <input id="demo-admin-duration" name="scheduleDuration" type="number" min="1" max="600" step="1">
+                        </div>
+                        <div class="live-demo-field live-demo-field-wide">
+                            <label for="demo-admin-rooms">Rooms</label>
+                            <textarea id="demo-admin-rooms" name="scheduleRooms" rows="4" placeholder="Enter one room per line"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="live-demo-form-actions">
+                    <button type="submit" class="btn btn-teal">Save demo exam</button>
+                    <button id="demo-admin-reset" type="button" class="btn btn-demo-secondary">Reset demo</button>
+                    <span id="demo-admin-message" class="live-demo-save-message" role="status" aria-live="polite"></span>
+                </div>
+            </form>
+
+            <aside class="live-demo-admin-preview" aria-labelledby="demo-admin-preview-heading">
+                <div class="content-card">
+                    <div class="dashboard-table-eyebrow">Current saved view</div>
+                    <h2 id="demo-admin-preview-heading"><span id="demo-admin-preview-code">MATH1001</span>: <span id="demo-admin-preview-title">Mathematics 1</span></h2>
+                    <p><span id="demo-admin-preview-badge" class="badge badge-awaiting"><span class="status-dot"></span><span id="demo-admin-preview-status">Awaiting Author</span></span></p>
+                    <dl class="live-demo-admin-summary">
+                        <div><dt>Author</dt><dd id="demo-admin-preview-author">Dr Alex Morgan</dd></div>
+                        <div><dt>iSolutions lead</dt><dd id="demo-admin-preview-lead">Dean Wall</dd></div>
+                        <div><dt>Next action</dt><dd id="demo-admin-preview-action">Add or configure questions and rubric</dd></div>
+                    </dl>
+                    <a href="demo-user-dashboard.html" class="btn btn-teal live-demo-block-button">View as Author</a>
+                </div>
+                <p class="live-demo-storage-note">Demo data is stored in this browser only. It does not change the other prototype examples or any live system.</p>
+            </aside>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+    <script src="live-demo.js"></script>
+</body>
+
+</html>

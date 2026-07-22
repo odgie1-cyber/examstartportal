@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Workspace - BIOL1005 Ready for Scheduling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <div class="main-container">
+        <a href="dashboard.html" class="back-link">&larr; Back to My Dashboard</a>
+        <h1>Genetics and Evolution (BIOL1005)</h1>
+
+        <div class="status-hero status-passed">
+            <div class="status-badge-row">
+                <span class="status-dot"></span> Status: Published Passed Checks
+            </div>
+            <p class="status-entails">
+                <strong>What this means:</strong> Your exam is ready to be scheduled. Please contact us if you make any
+                changes.
+            </p>
+            <div class="status-publication-warning" role="note">
+                <strong>Please note:</strong> If you make changes to your questions after we have published the exam,
+                we will need to publish it again. You can request this at any time by contacting your iSolutions Lead.
+            </div>
+        </div>
+
+        <div class="workspace-status-row">
+            <span class="audit-pass">Quality Checks: Pass</span>
+            <span class="score-pass">Tryout: Pass</span>
+        </div>
+
+        <div class="workspace-grid">
+            <div class="left-column">
+                <div class="content-card">
+                    <div class="card-title">1. Create Exam in OnDemand</div>
+                    <div class="card-description">
+                        Your questions and rubric have been added to the relevant OnDemand folders.
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-teal">Log in to OnDemand</a>
+                        <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-elearn">View OnDemand Guidance</a>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-title">2. Best Practice Quality Checks</div>
+                    <div class="card-description">
+                        The technical and best-practice checks have been completed successfully.
+                    </div>
+                    <button type="button" class="btn btn-teal"
+                        onclick="alert('Demo only: the live service will open the read-only quality check results.');">Preview Quality
+                        Check Results</button>
+                    <div class="alert-badge tryout-result tryout-result-pass">Quality checks passed.</div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-title">3. Try Out Your Exam and View Results</div>
+                    <div class="card-description">
+                        An author has completed the test run and achieved the required score of 100%.
+                    </div>
+                    <button type="button" class="btn btn-teal"
+                        onclick="alert('Demo only: the live service will launch the secure testing workspace.');">Preview Try Out
+                        Exam Again</button>
+                    <div class="alert-badge tryout-result tryout-result-pass">
+                        Tryout passed: an author has scored 100%.
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="content-card support-panel">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">iSolutions Lead</div>
+                    <div class="support-text">
+                        This exam is being configured by <strong>Dean Wall</strong>.
+                    </div>
+                    <div class="support-text">
+                        Contact your lead if you make any changes or need help.
+                    </div>
+                    <a href="mailto:d.wall@soton.ac.uk" class="btn btn-teal"
+                        style="display:block; padding: 8px;">Email iSolutions Lead</a>
+                </div>
+
+                <div class="content-card support-panel">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px;">Print versions</div>
+                    <div class="support-text">
+                        Word and PDF versions of the exam are available in the SharePoint folder.
+                    </div>
+                    <a href="https://soton.sharepoint.com/biol1005" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-teal" style="display:block; padding: 8px;">Open SharePoint Files</a>
+                </div>
+
+                <div class="content-card support-panel card-disabled">
+                    <div class="card-title" style="font-size: 14px; margin-bottom: 5px; color:#888;">Schedule and room
+                        booking</div>
+                    <div class="support-text" style="color: #777; font-style: italic; margin-bottom: 0;">
+                        This exam is ready to be scheduled. Date, time and room details will appear here once confirmed.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamStart Portal - My Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-live-demo-page="dashboard">
+    <div id="site-header"></div>
+
+    <div class="main-container dashboard-container">
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Exam tools and results guidance">
+                <section class="dashboard-menu-card dashboard-useful-links" aria-labelledby="dashboard-tools-title">
+                    <h2 id="dashboard-tools-title">Useful links</h2>
+                    <div class="dashboard-links-section">
+                        <h3>OnDemand guidance</h3>
+                        <p>Find step-by-step help for preparing, checking and running your exam in OnDemand.</p>
+                    </div>
+                    <div class="dashboard-actions">
+                        <a href="https://elearn.soton.ac.uk/article-categories/ondemand/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-elearn">View OnDemand guidance</a>
+                    </div>
+
+                    <div class="dashboard-links-divider"></div>
+
+                    <div class="results-guidance-header" aria-labelledby="dashboard-results-guidance-title">
+                        <h3 id="dashboard-results-guidance-title">After the exam</h3>
+                        <p>Guidance on how to view results.</p>
+                    </div>
+
+                    <div class="results-guidance-options">
+                        <div class="results-option">
+                            <div class="results-option-label">Individual student</div>
+                            <h4>Check a student&rsquo;s score</h4>
+                            <p>Read how to view one student&rsquo;s results report.</p>
+                            <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#see-a-results-report-for-an-individual"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Checker Guidance</a>
+                        </div>
+
+                        <div class="results-option">
+                            <div class="results-option-label">All students</div>
+                            <h4>Download all scores</h4>
+                            <p>Read how to export a detailed results spreadsheet.</p>
+                            <a href="https://elearn.soton.ac.uk/knowledge-base/results-exporter/#exporting-a-detailed-spreadsheet-of-your-exam-results"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-elearn">View Exporter Guidance</a>
+                        </div>
+                    </div>
+
+                    <div class="results-warning" role="note">
+                        <strong>Important:</strong> Do not use the Results Exporter until the day after your exam.
+                    </div>
+                    <p class="results-alternative">Alternatively, request your results from iSolutions.</p>
+                </section>
+            </aside>
+
+            <main class="dashboard-content">
+                <section class="ondemand-login-card" aria-labelledby="ondemand-login-title">
+                    <div class="ondemand-login-copy">
+                        <div class="ondemand-login-eyebrow">OnDemand access</div>
+                        <h2 id="ondemand-login-title">Open the exam system</h2>
+                        <p>This link only works if iSolutions has created an OnDemand account for you. If you do not have an account yet, please contact iSolutions. Guidance can be found in the Useful links section.</p>
+                    </div>
+                    <a href="https://ondemand.questionmark.eu" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-teal btn-ondemand-login">Log in to OnDemand</a>
+                </section>
+
+                <header class="dashboard-table-introduction">
+                    <h1 id="dashboard-exams-title">Your exams</h1>
+                    <p id="dashboard-exams-guidance">Select an exam below to open its workflow portal and see what you need to do next.</p>
+                </header>
+
+                <table id="dashboard-exams-table" class="dashboard-table" data-dashboard-table
+                    aria-labelledby="dashboard-exams-title" aria-describedby="dashboard-exams-guidance">
+                    <thead>
+                        <tr>
+                            <th class="col-exam">Exam / Module</th>
+                            <th class="col-status">Current Status</th>
+                            <th class="col-lead">iSolutions Lead</th>
+                            <th class="col-action">Action Step Required</th>
+                            <th class="col-audit">Quality Checks</th>
+                            <th class="col-score">Tryout</th>
+                            <th class="col-share">SharePoint</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="clickable-row" onclick="window.location='demo-exam-workspace.html';">
+                            <td>
+                                <strong id="demo-dashboard-code">MATH1001</strong><br>
+                                <span id="demo-dashboard-title" style="color:#666; font-size:12px;">Mathematics 1</span>
+                                <span class="dashboard-exam-meta">Exam system: OnDemand</span>
+                                <span class="dashboard-exam-meta">Author: <span id="demo-dashboard-author-full">Dr Alex Morgan</span></span>
+                            </td>
+                            <td>
+                                <span id="demo-dashboard-badge" class="badge badge-awaiting">
+                                    <span class="status-dot"></span><span id="demo-dashboard-status">Awaiting Author</span>
+                                </span>
+                            </td>
+                            <td id="demo-dashboard-lead">Dean Wall</td>
+                            <td id="demo-dashboard-action">Add or configure questions and rubric</td>
+                            <td><span id="demo-dashboard-quality" class="audit-pending">Pending</span></td>
+                            <td><span id="demo-dashboard-tryout" class="score-pending">Pending</span></td>
+                            <td><a id="demo-dashboard-sharepoint" href="https://soton.sharepoint.com/math1001" target="_blank"
+                                    rel="noopener noreferrer" class="btn-sharepoint" onclick="event.stopPropagation();">Open MATH1001 SharePoint files</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="demo-dashboard-empty" class="dashboard-table-empty live-demo-empty-state" role="status" hidden>
+                    <strong>No exams are currently available.</strong>
+                    <p>If you&rsquo;re expecting to see an exam here, please contact iSolutions.</p>
+                    <a href="mailto:serviceline@soton.ac.uk?subject=Missing%20ExamStart%20exam" class="btn btn-teal">Contact iSolutions</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="includes.js"></script>
+    <script src="live-demo.js"></script>
+    <script src="dashboard-table.js"></script>
+</body>
+
+</html>
